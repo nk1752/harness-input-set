@@ -3,11 +3,12 @@ import csv
 import json
 
 from filter import apply_harn_filter, apply_filter, apply_env_filter
-from harn_input_set import build_input_set
-from setup_yaml import setup_yaml
+from harn_input_set_old import build_internal, build_extrernal
+from setup_yaml import setup_stage
 
 
 def main():
+    print("********* main *********")
 
     input_set_values: list[dict] = []
     with open("flex-input-set.csv", "r") as file:
@@ -35,61 +36,77 @@ def main():
 
     # print("********* fgw_instance *********")
 
+    dev_b: dict = {}
+    qa_a: dict = {}
+    qa_b: dict = {}
+
+    dev_z_b: dict = {}
+    qa_z_a: dict = {}
+    qa_z_b: dict = {}
+
     project_name = 'rdc'
     project_column = 'harnProject'
 
+    proj_list: list[dict] = apply_harn_filter(project_name, project_column, input_set_values)
+    print(f"Count of proj_list: {len(proj_list)}")
+    with open("proj_list.yaml", "w") as file:
+        yaml.dump(proj_list, file, default_flow_style=False, sort_keys=False)
+
+    counter = 0
     try:
-        for input in input_set_values:
-            input_name: str = input[project_column]
+        for input in proj_list:
 
-            dev_b: dict = {}
-            dev_b_z: dict = {}
-
-            qa_a: dict = {}
-            qa_b: dict = {}
-            qa_z_a: dict = {}
-            qa_z_b: dict = {}
-
+            apiId: str = input['apiSpecAssetId']
             
-            if input_name == project_name:
-                target: str = input['fgwInstanceName']
-                print(f"fgwInstanceName --> {target}")
+            target: str = input['fgwInstanceName']
+            print(f"apiSpecAssetId --> {target}")
 
-                if target.find('dev-b') != -1:
-                    dev_b.update(input)
-                    print(f"dev_b: {len(dev_b)}")
-                    
-                elif target.find('dev-z-b') != -1:
-                    dev_b_z.update(input)
-                    print(f"dev_b_z: {len(dev_b_z)}")
-                    
-                elif target.find('np-a') != -1:
-                    qa_a.update(input)
-                    print(f"qa_a: {len(qa_a)}")
-                    
-                elif target.find('np-b') != -1:
-                    qa_b.update(input)
-                    print(f"qa_b: {len(qa_b)}")
-                    
-                elif target.find('np-z-a') != -1:
-                    qa_z_a.update(input)
-                    print(f"qa_z_a: {len(qa_z_a)}")
-                    
-                elif target.find('np-z-b') != -1:
-                    qa_z_b.update(input)
-                    print(f"qa_z_b: {len(qa_z_b)}")
-                    
-                
-                else:
-                    print(f"fgwInstanceName --> {target} not found")
+            if target.find('dev-b') != -1:
+                dev_b.update(input)
+                print(f"updated dev_b")
+            elif target.find('dev-z-b') != -1:
+                dev_z_b.update(input)
+                print(f"updated dev_z_b")
+            elif target.find('np-a') != -1:
+                qa_a.update(input)
+                print(f"updated qa_a")
+            elif target.find('np-b') != -1:
+                qa_b.update(input)
+                print(f"updated qa_b")
+            elif target.find('np-z-a') != -1:
+                qa_z_a.update(input)
+                print(f"updated qa_z_a")
+            elif target.find('np-z-b') != -1:
+                qa_z_b.update(input)
+                print(f"updated qa_z_b")
+            else:
+                print(f"fgwInstanceName --> {target} not found")
 
-                harn_input_set = build_input_set(dev_b, qa_a)
-                with open(f"harn_input_set_{target}.yaml", "w") as file:
-                    yaml.dump(harn_input_set, file, default_flow_style=False, sort_keys=False)
+            #proj_list.remove(input)
 
                     
     except KeyError:
         print(f"KeyError: {project_name} not found in the input_set")
+
+    print("********* dev_b *********")
+    print(json.dumps(dev_b, indent=4))
+    print("********* dev_b_z *********")
+    print(json.dumps(dev_z_b, indent=4))
+    print("********* qa_a *********")
+    print(json.dumps(qa_a, indent=4))
+    print("********* qa_b *********")
+    print(json.dumps(qa_b, indent=4))
+
+    
+
+    data = build_internal(dev_b, qa_a, qa_b)
+    with open("input_set_internal.yaml", "w") as file:
+        yaml.dump(data, file, default_flow_style=False, sort_keys=False)
+
+    # data = build_extrernal(dev_z_b, qa_z_a, qa_z_b)
+    # with open("input_set_external.yaml", "w") as file:
+    #     yaml.dump(data, file, default_flow_style=False, sort_keys=False)
+
 
     # qa_filter = apply_env_filter("QA", "apEnvName", pro_filter)
     # with open("qa_filter.yaml", "w") as file:

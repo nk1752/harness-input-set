@@ -2,9 +2,8 @@ import yaml
 import csv
 import json
 
-from filter import apply_harn_filter, apply_filter, apply_env_filter
-from harn_input_set_old import build_internal, build_extrernal
-from setup_yaml import setup_stage
+import filter
+from pipeline_input_set import template_init, stage_init, stage_update
 
 
 def main():
@@ -44,19 +43,36 @@ def main():
     qa_z_a: dict = {}
     qa_z_b: dict = {}
 
-    project_name = 'rdc'
-    project_column = 'harnProject'
+    x_key = 'harnProject'
+    x_value = 'rdc'
 
-    proj_list: list[dict] = apply_harn_filter(project_name, project_column, input_set_values)
+    proj_list: list[dict] = filter.input_data(x_key, x_value, input_set_values)
     print(f"Count of proj_list: {len(proj_list)}")
     with open("proj_list.yaml", "w") as file:
         yaml.dump(proj_list, file, default_flow_style=False, sort_keys=False)
 
+    x_key = 'apiSpecAssetId'
+    x_value = 'mkt-ras-proxy'
+
+    asset_list: list[dict] = filter.input_data(x_key, x_value, proj_list)
+    print(f"Count of asset_list: {len(asset_list)}")
+    with open("asset_list.yaml", "w") as file:
+        yaml.dump(asset_list, file, default_flow_style=False, sort_keys=False)
+
+    x_key = 'apiSpecAssetVersion'
+    x_value = 'v1'
+
+    input_list: list[dict] = filter.input_data(x_key, x_value, asset_list)
+    print(f"Count of input_list: {len(input_list)}")
+    with open("input_list.yaml", "w") as file:
+        yaml.dump(input_list, file, default_flow_style=False, sort_keys=False)
+
     counter = 0
     try:
-        for input in proj_list:
+        for input in input_list:
 
-            apiId: str = input['apiSpecAssetId']
+            project_name: str = input['harnProject']
+            pipeline_name: str = input['apiSpecAssetId']
             
             target: str = input['fgwInstanceName']
             print(f"apiSpecAssetId --> {target}")
@@ -83,29 +99,60 @@ def main():
                 print(f"fgwInstanceName --> {target} not found")
 
             #proj_list.remove(input)
-
-                    
+            
     except KeyError:
-        print(f"KeyError: {project_name} not found in the input_set")
+        print(f"KeyError: {target} not found in the input_set")
+
+    input_set_internal = template_init(pipeline_name, project_name, "Internal")
+    print(yaml.dump(input_set_internal, default_flow_style=False, sort_keys=False))
+
+    input_set_external = template_init(pipeline_name, project_name, "External")
+    print(yaml.dump(input_set_external, default_flow_style=False, sort_keys=False))
 
     print("********* dev_b *********")
     print(json.dumps(dev_b, indent=4))
-    print("********* dev_b_z *********")
-    print(json.dumps(dev_z_b, indent=4))
-    print("********* qa_a *********")
-    print(json.dumps(qa_a, indent=4))
-    print("********* qa_b *********")
-    print(json.dumps(qa_b, indent=4))
-
     
+    # check if dev_b is empty
+    # if not, build the internal and external sets
+    if dev_b:
+        input_set_internal =  stage_update(input_set_internal, dev_b, "dev")
+    else:
+        input_set_internal = stage_init(input_set_internal, "dev")
+    
+    if qa_a:
+        input_set_internal =  stage_update(input_set_internal, qa_a, "qaa")
+    else:
+        input_set_internal = stage_init(input_set_internal, "qaa")
 
-    data = build_internal(dev_b, qa_a, qa_b)
-    with open("input_set_internal.yaml", "w") as file:
-        yaml.dump(data, file, default_flow_style=False, sort_keys=False)
+    if qa_b:
+        input_set_internal =  stage_update(input_set_internal, qa_b, "qab")
+    else:
+        input_set_internal = stage_init(input_set_internal, "qab")
 
-    # data = build_extrernal(dev_z_b, qa_z_a, qa_z_b)
-    # with open("input_set_external.yaml", "w") as file:
-    #     yaml.dump(data, file, default_flow_style=False, sort_keys=False)
+    # ***** dmz *****
+    
+    if dev_z_b:
+        input_set_internal =  stage_update(input_set_internal, dev_z_b, "devz")
+    else:
+        input_set_internal = stage_init(input_set_internal, "devz")
+
+    if qa_z_a:
+        input_set_external =  stage_update(input_set_internal, qa_z_a, "qaza")
+    else:
+        input_set_external = stage_init(input_set_internal, "qaza")
+
+    if qa_z_b:
+        input_set_external =  stage_update(input_set_internal, qa_z_b, "qazb")
+    else:
+        input_set_external = stage_init(input_set_internal, "qazb")
+
+
+
+    print("********* input_set_internal *********")
+    print(yaml.dump(input_set_internal, default_flow_style=False, sort_keys=False))
+
+    print("********* input_set_external *********")
+    print(yaml.dump(input_set_external, default_flow_style=False, sort_keys=False))
 
 
     # qa_filter = apply_env_filter("QA", "apEnvName", pro_filter)

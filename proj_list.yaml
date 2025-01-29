@@ -1,4 +1,6 @@
 - apBusinessGroupName: Marketing
+  apiEnv: ''
+  apiVersion: ''
   apEnvName: Dev
   harnProject: rdc
   apiName: regions-rates-sys-proxy-dev-v1
@@ -20,6 +22,8 @@
   impl_tls_context: tls-context
   impl_resp_timeout: '30000'
 - apBusinessGroupName: Marketing
+  apiEnv: ''
+  apiVersion: ''
   apEnvName: Dev
   harnProject: rdc
   apiName: rdc-capi-proxy-dev-v1
@@ -41,6 +45,8 @@
   impl_tls_context: tls-context
   impl_resp_timeout: '30000'
 - apBusinessGroupName: Marketing
+  apiEnv: ''
+  apiVersion: ''
   apEnvName: Dev
   harnProject: rdc
   apiName: regions-locator-proxy-dev-v1
@@ -62,6 +68,8 @@
   impl_tls_context: tls-context
   impl_resp_timeout: '30000'
 - apBusinessGroupName: Marketing
+  apiEnv: ''
+  apiVersion: ''
   apEnvName: Dev
   harnProject: rdc
   apiName: mkt-ras-proxy-dev-v4
@@ -83,6 +91,8 @@
   impl_tls_context: tls-context
   impl_resp_timeout: '30000'
 - apBusinessGroupName: Marketing
+  apiEnv: ''
+  apiVersion: ''
   apEnvName: Dev
   harnProject: rdc
   apiName: mkt-ras-proxy-dev-v1
@@ -104,6 +114,8 @@
   impl_tls_context: tls-context
   impl_resp_timeout: '30000'
 - apBusinessGroupName: Marketing
+  apiEnv: ''
+  apiVersion: ''
   apEnvName: QA
   harnProject: rdc
   apiName: regions-rates-api-mule-proxy-qa-v1
@@ -125,6 +137,8 @@
   impl_tls_context: tls-context
   impl_resp_timeout: '30000'
 - apBusinessGroupName: Marketing
+  apiEnv: ''
+  apiVersion: ''
   apEnvName: QA
   harnProject: rdc
   apiName: rdc-capi-proxy-qa-v1
@@ -146,6 +160,8 @@
   impl_tls_context: tls-context
   impl_resp_timeout: '30000'
 - apBusinessGroupName: Marketing
+  apiEnv: ''
+  apiVersion: ''
   apEnvName: QA
   harnProject: rdc
   apiName: regions-locator-proxy-qa-v1
@@ -167,6 +183,8 @@
   impl_tls_context: tls-context
   impl_resp_timeout: '30000'
 - apBusinessGroupName: Marketing
+  apiEnv: ''
+  apiVersion: ''
   apEnvName: QA
   harnProject: rdc
   apiName: regions-locator-proxy-test-v1
@@ -188,6 +206,8 @@
   impl_tls_context: tls-context
   impl_resp_timeout: '30000'
 - apBusinessGroupName: Marketing
+  apiEnv: ''
+  apiVersion: ''
   apEnvName: QA
   harnProject: rdc
   apiName: rdc-capi-proxy-test-v1
@@ -209,6 +229,8 @@
   impl_tls_context: tls-context
   impl_resp_timeout: '30000'
 - apBusinessGroupName: Marketing
+  apiEnv: ''
+  apiVersion: ''
   apEnvName: QA
   harnProject: rdc
   apiName: mkt-ras-proxy-qa-v4
@@ -230,6 +252,8 @@
   impl_tls_context: tls-context
   impl_resp_timeout: '30000'
 - apBusinessGroupName: Marketing
+  apiEnv: ''
+  apiVersion: ''
   apEnvName: QA
   harnProject: rdc
   apiName: mkt-ras-proxy-qa-v1
@@ -251,6 +275,8 @@
   impl_tls_context: tls-context
   impl_resp_timeout: '30000'
 - apBusinessGroupName: Marketing
+  apiEnv: ''
+  apiVersion: ''
   apEnvName: QA
   harnProject: rdc
   apiName: regions-rates-api-mule-proxy-qa-v1
@@ -272,6 +298,8 @@
   impl_tls_context: tls-context
   impl_resp_timeout: '30000'
 - apBusinessGroupName: Marketing
+  apiEnv: ''
+  apiVersion: ''
   apEnvName: QA
   harnProject: rdc
   apiName: regions-locator-proxy-qa-v1
@@ -293,6 +321,8 @@
   impl_tls_context: tls-context
   impl_resp_timeout: '30000'
 - apBusinessGroupName: Marketing
+  apiEnv: ''
+  apiVersion: ''
   apEnvName: QA
   harnProject: rdc
   apiName: rdc-capi-proxy-qa-v1
@@ -314,6 +344,8 @@
   impl_tls_context: tls-context
   impl_resp_timeout: '30000'
 - apBusinessGroupName: Marketing
+  apiEnv: ''
+  apiVersion: ''
   apEnvName: QA
   harnProject: rdc
   apiName: regions-locator-proxy-test-v1
@@ -335,6 +367,8 @@
   impl_tls_context: tls-context
   impl_resp_timeout: '30000'
 - apBusinessGroupName: Marketing
+  apiEnv: ''
+  apiVersion: ''
   apEnvName: QA
   harnProject: rdc
   apiName: rdc-capi-proxy-test-v1
@@ -356,6 +390,8 @@
   impl_tls_context: tls-context
   impl_resp_timeout: '30000'
 - apBusinessGroupName: Marketing
+  apiEnv: ''
+  apiVersion: ''
   apEnvName: QA
   harnProject: rdc
   apiName: mkt-ras-proxy-qa-v4
@@ -377,6 +413,8 @@
   impl_tls_context: tls-context
   impl_resp_timeout: '30000'
 - apBusinessGroupName: Marketing
+  apiEnv: ''
+  apiVersion: ''
   apEnvName: QA
   harnProject: rdc
   apiName: mkt-ras-proxy-qa-v1
@@ -398,6 +436,8 @@
   impl_tls_context: tls-context
   impl_resp_timeout: '30000'
 - apBusinessGroupName: Marketing
+  apiEnv: ''
+  apiVersion: ''
   apEnvName: QA
   harnProject: rdc
   apiName: mkt-ras-proxy-qa-dmz-v1
@@ -419,6 +459,8 @@
   impl_tls_context: tls-context
   impl_resp_timeout: '30000'
 - apBusinessGroupName: Marketing
+  apiEnv: ''
+  apiVersion: ''
   apEnvName: QA
   harnProject: rdc
   apiName: mkt-ras-proxy-qa-dmz-v4
@@ -440,6 +482,8 @@
   impl_tls_context: tls-context
   impl_resp_timeout: '30000'
 - apBusinessGroupName: Marketing
+  apiEnv: ''
+  apiVersion: ''
   apEnvName: QA
   harnProject: rdc
   apiName: regions-rates-api-mule-proxy-qa-dmz-v1
@@ -461,6 +505,8 @@
   impl_tls_context: tls-context
   impl_resp_timeout: '30000'
 - apBusinessGroupName: Marketing
+  apiEnv: ''
+  apiVersion: ''
   apEnvName: QA
   harnProject: rdc
   apiName: mkt-ras-proxy-qa-dmz-v1
@@ -482,6 +528,8 @@
   impl_tls_context: tls-context
   impl_resp_timeout: '30000'
 - apBusinessGroupName: Marketing
+  apiEnv: ''
+  apiVersion: ''
   apEnvName: QA
   harnProject: rdc
   apiName: mkt-ras-proxy-qa-dmz-v4
@@ -503,6 +551,8 @@
   impl_tls_context: tls-context
   impl_resp_timeout: '30000'
 - apBusinessGroupName: Marketing
+  apiEnv: ''
+  apiVersion: ''
   apEnvName: QA
   harnProject: rdc
   apiName: regions-rates-api-mule-proxy-qa-dmz-v1

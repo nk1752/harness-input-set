@@ -1,0 +1,584 @@
+inputSet:
+  name: mkt-ras-proxy-v4
+  tages: {}
+  identifier: mktrasproxyv4
+  orgIdentifier: regionsappdev
+  projectIdentifier: rdc
+  pipeline:
+    identifier: Flex_Gateway_Proxy_DeploymentExternal
+    template:
+      templateInputs:
+        stages:
+        - stage:
+            identifier: devz
+            template:
+              templateInputs:
+                type: Deployment
+                variables:
+                - name: apBusinessGroupName
+                  type: String
+                  value: ''
+                - name: fgwInstanceName
+                  type: String
+                  value: ''
+                - name: apiSpecAssetId
+                  type: String
+                  value: ''
+                - name: apClientId
+                  type: Secret
+                  value: ''
+                - name: apClientSecret
+                  type: Secret
+                  value: ''
+                - name: apEnvName
+                  type: String
+                  value: ''
+                - name: apiSpecAssetVersion
+                  type: String
+                  value: ''
+                - name: policy
+                  type: String
+                  value: ''
+                - name: slaTiersSingleTier
+                  type: String
+                  value: ''
+                - name: slaTiersBasicMaxReq
+                  type: String
+                  value: '100'
+                - name: slaTiersGoldMaxReq
+                  type: String
+                  value: '100'
+                - name: slaTiersPlatinumMaxReq
+                  type: String
+                  value: '100'
+                - name: slaTiersUnlimitedMaxReq
+                  type: String
+                  value: ''
+                - name: apiEnv
+                  type: String
+                  value: ''
+                - name: apiVersion
+                  type: String
+                  value: ''
+                - name: apiLabel
+                  type: String
+                  value: ''
+                - name: extClientProvider
+                  type: String
+                  value: ''
+                - name: dnsGlobal
+                  type: String
+                  value: ''
+                - name: dnsLocal
+                  type: String
+                  value: ''
+                - name: implHost
+                  type: String
+                  value: ''
+                - name: implProtocol
+                  type: String
+                  value: ''
+                - name: implPort
+                  type: String
+                  value: ''
+                - name: implPath
+                  type: String
+                  value: /
+                - name: implAuthHeader
+                  type: String
+                  value: ''
+                - name: implClientId
+                  type: Secret
+                  value: ''
+                - name: implClientSecret
+                  type: Secret
+                  value: ''
+                - name: implRespTimeout
+                  type: String
+                  value: '30000'
+                - name: dataCenter
+                  type: String
+                  value: ''
+                - name: fgwTimeout
+                  type: String
+                  value: 30s
+                - name: openshiftProject
+                  type: String
+                  value: ''
+                - name: Hostname
+                  type: String
+                  value: '""'
+                - name: implTlsSecretGroup
+                  type: String
+                  value: tls-secret-group
+                - name: implTlsContext
+                  type: String
+                  value: tls-context
+                when:
+                  condition: 'true'
+        - stage:
+            identifier: Approval_for_qaz
+            type: Approval
+            spec:
+              execution:
+                steps:
+                - step:
+                    identifier: Approval_for_qaz
+                    type: HarnessApproval
+                    spec:
+                      approvers:
+                        userGroups:
+                        - account.HARN_API_ADM
+        - stage:
+            identifier: qaza
+            template:
+              templateInputs:
+                type: Deployment
+                variables:
+                - name: apBusinessGroupName
+                  type: String
+                  value: Marketing
+                - name: fgwInstanceName
+                  type: String
+                  value: fgw-marketing-np-z-a-small-1
+                - name: apiSpecAssetId
+                  type: String
+                  value: mkt-ras-proxy
+                - name: apClientId
+                  type: Secret
+                  value: account.marketingCicdClientidNp
+                - name: apClientSecret
+                  type: Secret
+                  value: account.marketingCicdClientsecretNp
+                - name: apEnvName
+                  type: String
+                  value: QA
+                - name: apiSpecAssetVersion
+                  type: String
+                  value: v4
+                - name: policy
+                  type: String
+                  value: '**policy**'
+                - name: slaTiersSingleTier
+                  type: String
+                  value: 'false'
+                - name: slaTiersBasicMaxReq
+                  type: String
+                  value: '100'
+                - name: slaTiersGoldMaxReq
+                  type: String
+                  value: '100'
+                - name: slaTiersPlatinumMaxReq
+                  type: String
+                  value: '100'
+                - name: slaTiersUnlimitedMaxReq
+                  type: String
+                  value: ''
+                - name: apiEnv
+                  type: String
+                  value: ''
+                - name: apiVersion
+                  type: String
+                  value: ''
+                - name: apiLabel
+                  type: String
+                  value: mkt-ras-proxy-qa-za
+                - name: extClientProvider
+                  type: String
+                  value: ''
+                - name: dnsGlobal
+                  type: String
+                  value: https://mkt-ras-proxy-qa-v4.api.regionstest.com
+                - name: dnsLocal
+                  type: String
+                  value: https://mkt-ras-proxy-qa-v4.api.regionstest.com
+                - name: implHost
+                  type: String
+                  value: rosie-ad-service-api-test.ocp-np-b.regionsapps.com
+                - name: implProtocol
+                  type: String
+                  value: https
+                - name: implPort
+                  type: String
+                  value: '443'
+                - name: implPath
+                  type: String
+                  value: /
+                - name: implAuthHeader
+                  type: String
+                  value: myAuthHeader
+                - name: implClientId
+                  type: Secret
+                  value: myImplClientId
+                - name: implClientSecret
+                  type: Secret
+                  value: myImplClientSecret
+                - name: implRespTimeout
+                  type: String
+                  value: '30000'
+                - name: dataCenter
+                  type: String
+                  value: dc12
+                - name: fgwTimeout
+                  type: String
+                  value: 30s
+                - name: openshiftProject
+                  type: String
+                  value: fgw-marketing-qaza
+                - name: Hostname
+                  type: String
+                  value: '""'
+                - name: implTlsSecretGroup
+                  type: String
+                  value: tls-secret-group
+                - name: implTlsContext
+                  type: String
+                  value: tls-context
+                when:
+                  condition: 'true'
+        - stage:
+            identifier: qazb
+            template:
+              templateInputs:
+                type: Deployment
+                variables:
+                - name: apBusinessGroupName
+                  type: String
+                  value: Marketing
+                - name: fgwInstanceName
+                  type: String
+                  value: fgw-marketing-np-z-b-small-1
+                - name: apiSpecAssetId
+                  type: String
+                  value: mkt-ras-proxy
+                - name: apClientId
+                  type: Secret
+                  value: account.marketingCicdClientidNp
+                - name: apClientSecret
+                  type: Secret
+                  value: account.marketingCicdClientsecretNp
+                - name: apEnvName
+                  type: String
+                  value: QA
+                - name: apiSpecAssetVersion
+                  type: String
+                  value: v4
+                - name: policy
+                  type: String
+                  value: '**policy**'
+                - name: slaTiersSingleTier
+                  type: String
+                  value: 'false'
+                - name: slaTiersBasicMaxReq
+                  type: String
+                  value: '100'
+                - name: slaTiersGoldMaxReq
+                  type: String
+                  value: '100'
+                - name: slaTiersPlatinumMaxReq
+                  type: String
+                  value: '100'
+                - name: slaTiersUnlimitedMaxReq
+                  type: String
+                  value: ''
+                - name: apiEnv
+                  type: String
+                  value: ''
+                - name: apiVersion
+                  type: String
+                  value: ''
+                - name: apiLabel
+                  type: String
+                  value: mkt-ras-proxy-qa-zb
+                - name: extClientProvider
+                  type: String
+                  value: ''
+                - name: dnsGlobal
+                  type: String
+                  value: https://mkt-ras-proxy-qa-v4.api.regionstest.com
+                - name: dnsLocal
+                  type: String
+                  value: https://mkt-ras-proxy-qa-v4.api.regionstest.com/
+                - name: implHost
+                  type: String
+                  value: rosie-ad-service-api-test.ocp-np-b.regionsapps.com
+                - name: implProtocol
+                  type: String
+                  value: https
+                - name: implPort
+                  type: String
+                  value: '443'
+                - name: implPath
+                  type: String
+                  value: /
+                - name: implAuthHeader
+                  type: String
+                  value: myAuthHeader
+                - name: implClientId
+                  type: Secret
+                  value: myImplClientId
+                - name: implClientSecret
+                  type: Secret
+                  value: myImplClientSecret
+                - name: implRespTimeout
+                  type: String
+                  value: '30000'
+                - name: dataCenter
+                  type: String
+                  value: dc12
+                - name: fgwTimeout
+                  type: String
+                  value: 30s
+                - name: openshiftProject
+                  type: String
+                  value: fgw-marketing-qazb
+                - name: Hostname
+                  type: String
+                  value: '""'
+                - name: implTlsSecretGroup
+                  type: String
+                  value: tls-secret-group
+                - name: implTlsContext
+                  type: String
+                  value: tls-context
+                when:
+                  condition: 'true'
+        - stage:
+            identifier: Approval_for_prodz
+            type: Approval
+            spec:
+              execution:
+                steps:
+                - step:
+                    identifier: Approval_for_prodz
+                    type: HarnessApproval
+                    spec:
+                      approvers:
+                        userGroups:
+                        - account.HARN_API_ADM
+        - stage:
+            identifier: prodza
+            template:
+              templateInputs:
+                type: Deployment
+                variables:
+                - name: apBusinessGroupName
+                  type: String
+                  value: ''
+                - name: fgwInstanceName
+                  type: String
+                  value: ''
+                - name: apiSpecAssetId
+                  type: String
+                  value: ''
+                - name: apClientId
+                  type: Secret
+                  value: ''
+                - name: apClientSecret
+                  type: Secret
+                  value: ''
+                - name: apEnvName
+                  type: String
+                  value: ''
+                - name: apiSpecAssetVersion
+                  type: String
+                  value: ''
+                - name: policy
+                  type: String
+                  value: ''
+                - name: slaTiersSingleTier
+                  type: String
+                  value: ''
+                - name: slaTiersBasicMaxReq
+                  type: String
+                  value: '100'
+                - name: slaTiersGoldMaxReq
+                  type: String
+                  value: '100'
+                - name: slaTiersPlatinumMaxReq
+                  type: String
+                  value: '100'
+                - name: slaTiersUnlimitedMaxReq
+                  type: String
+                  value: ''
+                - name: apiEnv
+                  type: String
+                  value: ''
+                - name: apiVersion
+                  type: String
+                  value: ''
+                - name: apiLabel
+                  type: String
+                  value: ''
+                - name: extClientProvider
+                  type: String
+                  value: ''
+                - name: dnsGlobal
+                  type: String
+                  value: ''
+                - name: dnsLocal
+                  type: String
+                  value: ''
+                - name: implHost
+                  type: String
+                  value: ''
+                - name: implProtocol
+                  type: String
+                  value: ''
+                - name: implPort
+                  type: String
+                  value: ''
+                - name: implPath
+                  type: String
+                  value: /
+                - name: implAuthHeader
+                  type: String
+                  value: ''
+                - name: implClientId
+                  type: Secret
+                  value: ''
+                - name: implClientSecret
+                  type: Secret
+                  value: ''
+                - name: implRespTimeout
+                  type: String
+                  value: '30000'
+                - name: dataCenter
+                  type: String
+                  value: ''
+                - name: fgwTimeout
+                  type: String
+                  value: 30s
+                - name: openshiftProject
+                  type: String
+                  value: ''
+                - name: Hostname
+                  type: String
+                  value: '""'
+                - name: implTlsSecretGroup
+                  type: String
+                  value: tls-secret-group
+                - name: implTlsContext
+                  type: String
+                  value: tls-context
+                when:
+                  condition: 'true'
+        - stage:
+            identifier: prodzb
+            template:
+              templateInputs:
+                type: Deployment
+                variables:
+                - name: apBusinessGroupName
+                  type: String
+                  value: ''
+                - name: fgwInstanceName
+                  type: String
+                  value: ''
+                - name: apiSpecAssetId
+                  type: String
+                  value: ''
+                - name: apClientId
+                  type: Secret
+                  value: ''
+                - name: apClientSecret
+                  type: Secret
+                  value: ''
+                - name: apEnvName
+                  type: String
+                  value: ''
+                - name: apiSpecAssetVersion
+                  type: String
+                  value: ''
+                - name: policy
+                  type: String
+                  value: ''
+                - name: slaTiersSingleTier
+                  type: String
+                  value: ''
+                - name: slaTiersBasicMaxReq
+                  type: String
+                  value: '100'
+                - name: slaTiersGoldMaxReq
+                  type: String
+                  value: '100'
+                - name: slaTiersPlatinumMaxReq
+                  type: String
+                  value: '100'
+                - name: slaTiersUnlimitedMaxReq
+                  type: String
+                  value: ''
+                - name: apiEnv
+                  type: String
+                  value: ''
+                - name: apiVersion
+                  type: String
+                  value: ''
+                - name: apiLabel
+                  type: String
+                  value: ''
+                - name: extClientProvider
+                  type: String
+                  value: ''
+                - name: dnsGlobal
+                  type: String
+                  value: ''
+                - name: dnsLocal
+                  type: String
+                  value: ''
+                - name: implHost
+                  type: String
+                  value: ''
+                - name: implProtocol
+                  type: String
+                  value: ''
+                - name: implPort
+                  type: String
+                  value: ''
+                - name: implPath
+                  type: String
+                  value: /
+                - name: implAuthHeader
+                  type: String
+                  value: ''
+                - name: implClientId
+                  type: Secret
+                  value: ''
+                - name: implClientSecret
+                  type: Secret
+                  value: ''
+                - name: implRespTimeout
+                  type: String
+                  value: '30000'
+                - name: dataCenter
+                  type: String
+                  value: ''
+                - name: fgwTimeout
+                  type: String
+                  value: 30s
+                - name: openshiftProject
+                  type: String
+                  value: ''
+                - name: Hostname
+                  type: String
+                  value: '""'
+                - name: implTlsSecretGroup
+                  type: String
+                  value: tls-secret-group
+                - name: implTlsContext
+                  type: String
+                  value: tls-context
+                when:
+                  condition: 'true'
+        - stage:
+            identifier: Closing_Approval
+            type: Approval
+            spec:
+              execution:
+                steps:
+                - step:
+                    identifier: Closing_Approval
+                    type: HarnessApproval
+                    spec:
+                      approvers:
+                        userGroups: ''

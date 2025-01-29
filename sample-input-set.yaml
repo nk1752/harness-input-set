@@ -69,7 +69,7 @@ inputSet:
                     - name: dnsGlobal
                       type: String
                       value: api.regionstest.com
-                    - name: c
+                    - name: dnsLocal
                       type: String
                       value: api.regionstest.com
                     - name: implHost

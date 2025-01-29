@@ -1,9 +1,9 @@
 inputSet:
-  name: fgw-tmapi-rtp-send-proxy
-  tags: {}
-  identifier: fgwtmapirtpsendproxy
+  name: rdc-capi-sys-proxy-v1
+  tages: {}
+  identifier: rdccapisysproxyv1
   orgIdentifier: regionsappdev
-  projectIdentifier: treasurymanagementapis
+  projectIdentifier: rdc
   pipeline:
     identifier: Flex_Gateway_Proxy_DeploymentExternal
     template:
@@ -17,31 +17,31 @@ inputSet:
                 variables:
                 - name: apBusinessGroupName
                   type: String
-                  value: Marketing
+                  value: ''
                 - name: fgwInstanceName
                   type: String
-                  value: fgw-marketing-dev-b-small-1
+                  value: ''
                 - name: apiSpecAssetId
                   type: String
-                  value: ' tmapi-rtp-send-proxy'
+                  value: ''
                 - name: apClientId
                   type: Secret
-                  value: account.MarketingCicdClientidNp
+                  value: ''
                 - name: apClientSecret
                   type: Secret
-                  value: account.partyCicdClientsecretNp
+                  value: ''
                 - name: apEnvName
                   type: String
-                  value: Dev
+                  value: ''
                 - name: apiSpecAssetVersion
                   type: String
-                  value: 1.0.0
+                  value: ''
                 - name: policy
                   type: String
-                  value: sla
+                  value: ''
                 - name: slaTiersSingleTier
                   type: String
-                  value: 'false'
+                  value: ''
                 - name: slaTiersBasicMaxReq
                   type: String
                   value: '100'
@@ -56,25 +56,31 @@ inputSet:
                   value: ''
                 - name: apiEnv
                   type: String
-                  value: dev
+                  value: ''
                 - name: apiVersion
                   type: String
-                  value: v1
+                  value: ''
                 - name: apiLabel
                   type: String
-                  value: ' tmapi-rtp-send-proxy-fgw-dev-b'
+                  value: ''
                 - name: extClientProvider
+                  type: String
+                  value: ''
+                - name: dnsGlobal
+                  type: String
+                  value: ''
+                - name: dnsLocal
                   type: String
                   value: ''
                 - name: implHost
                   type: String
-                  value: tmapi-client-endpoints-dev.apps.np-b.openshift.rgbk.com
+                  value: ''
                 - name: implProtocol
                   type: String
-                  value: https
+                  value: ''
                 - name: implPort
                   type: String
-                  value: '443'
+                  value: ''
                 - name: implPath
                   type: String
                   value: /
@@ -83,22 +89,22 @@ inputSet:
                   value: ''
                 - name: implClientId
                   type: Secret
-                  value: org.tmapiRtpSendProxyClientIdDev
+                  value: ''
                 - name: implClientSecret
                   type: Secret
-                  value: org.tmapiRtpSendProxyClientSecretDev
+                  value: ''
                 - name: implRespTimeout
                   type: String
                   value: '30000'
                 - name: dataCenter
                   type: String
-                  value: dc12
+                  value: ''
                 - name: fgwTimeout
                   type: String
                   value: 30s
                 - name: openshiftProject
                   type: String
-                  value: fgw-party-dev
+                  value: ''
                 - name: Hostname
                   type: String
                   value: '""'
@@ -111,13 +117,13 @@ inputSet:
                 when:
                   condition: 'true'
         - stage:
-            identifier: Approval_for_qa
+            identifier: Approval_for_qaz
             type: Approval
             spec:
               execution:
                 steps:
                 - step:
-                    identifier: Approval_for_qa
+                    identifier: Approval_for_qaz
                     type: HarnessApproval
                     spec:
                       approvers:
@@ -140,19 +146,19 @@ inputSet:
                   value: regions-rates-sys-proxy
                 - name: apClientId
                   type: Secret
-                  value: account.partyCicdClientidNp
+                  value: account.marketingCicdClientidNp
                 - name: apClientSecret
                   type: Secret
-                  value: account.partyCicdClientsecretNp
+                  value: account.marketingCicdClientsecretNp
                 - name: apEnvName
                   type: String
                   value: QA
                 - name: apiSpecAssetVersion
                   type: String
-                  value: 1.0.0
+                  value: v1
                 - name: policy
                   type: String
-                  value: sla
+                  value: '**policy**'
                 - name: slaTiersSingleTier
                   type: String
                   value: 'false'
@@ -170,25 +176,25 @@ inputSet:
                   value: ''
                 - name: apiEnv
                   type: String
-                  value: qa
+                  value: ''
                 - name: apiVersion
                   type: String
-                  value: v1
+                  value: ''
                 - name: apiLabel
                   type: String
-                  value: ' tmapi-rtp-send-proxy-fgw-qa-a'
+                  value: regions-rates-sys-proxy-qa-za
                 - name: extClientProvider
                   type: String
                   value: ''
                 - name: dnsGlobal
                   type: String
-                  value: api.regionstest.com
+                  value: https://regions-rates-sys-proxy-qa-v1.api.regionstest.com
                 - name: dnsLocal
                   type: String
-                  value: api.regionstest.com
+                  value: https://regions-rates-sys-proxy-qa-v1.api.regionstest.com
                 - name: implHost
                   type: String
-                  value: tmapi-client-endpoints-qa.apps.np-b.openshift.rgbk.com
+                  value: regions-rates-api-test.ocp-np-b.regionsapps.com
                 - name: implProtocol
                   type: String
                   value: https
@@ -200,25 +206,25 @@ inputSet:
                   value: /
                 - name: implAuthHeader
                   type: String
-                  value: ''
+                  value: myAuthHeader
                 - name: implClientId
                   type: Secret
-                  value: org.partyCicdClientidNp
+                  value: myImplClientId
                 - name: implClientSecret
                   type: Secret
-                  value: org.partyCicdClientsecretNp
+                  value: myImplClientSecret
                 - name: implRespTimeout
                   type: String
                   value: '30000'
                 - name: dataCenter
                   type: String
-                  value: roc
+                  value: dc12
                 - name: fgwTimeout
                   type: String
                   value: 30s
                 - name: openshiftProject
                   type: String
-                  value: fgw-party-qa
+                  value: fgw-marketing-qaza
                 - name: Hostname
                   type: String
                   value: '""'
@@ -238,28 +244,28 @@ inputSet:
                 variables:
                 - name: apBusinessGroupName
                   type: String
-                  value: Party
+                  value: Marketing
                 - name: fgwInstanceName
                   type: String
-                  value: fgw-party-np-z-b-small-1
+                  value: fgw-marketing-np-z-b-small-1
                 - name: apiSpecAssetId
                   type: String
-                  value: ' tmapi-rtp-send-proxy'
+                  value: regions-rates-sys-proxy
                 - name: apClientId
                   type: Secret
-                  value: account.partyCicdClientidNp
+                  value: account.marketingCicdClientidNp
                 - name: apClientSecret
                   type: Secret
-                  value: account.partyCicdClientsecretNp
+                  value: account.marketingCicdClientsecretNp
                 - name: apEnvName
                   type: String
                   value: QA
                 - name: apiSpecAssetVersion
                   type: String
-                  value: 1.0.0
+                  value: v1
                 - name: policy
                   type: String
-                  value: sla
+                  value: '**policy**'
                 - name: slaTiersSingleTier
                   type: String
                   value: 'false'
@@ -277,25 +283,25 @@ inputSet:
                   value: ''
                 - name: apiEnv
                   type: String
-                  value: qa
+                  value: ''
                 - name: apiVersion
                   type: String
-                  value: v1
+                  value: ''
                 - name: apiLabel
                   type: String
-                  value: ' tmapi-rtp-send-proxy-fgw-qa-b'
+                  value: regions-rates-sys-proxy-qa-zb
                 - name: extClientProvider
                   type: String
                   value: ''
                 - name: dnsGlobal
                   type: String
-                  value: api.regionstest.com
+                  value: https://regions-rates-sys-proxy-qa-v1.api.regionstest.com
                 - name: dnsLocal
                   type: String
-                  value: api.regionstest.com
+                  value: https://regions-rates-sys-proxy-qa-v1.api.regionstest.com
                 - name: implHost
                   type: String
-                  value: tmapi-client-endpoints-qa.apps.np-b.openshift.rgbk.com
+                  value: regions-rates-api-test.ocp-np-b.regionsapps.com
                 - name: implProtocol
                   type: String
                   value: https
@@ -307,13 +313,13 @@ inputSet:
                   value: /
                 - name: implAuthHeader
                   type: String
-                  value: ''
+                  value: myAuthHeader
                 - name: implClientId
                   type: Secret
-                  value: org.tmapiRtpSendProxyClientIdDev
+                  value: myImplClientId
                 - name: implClientSecret
                   type: Secret
-                  value: org.tmapiRtpSendProxyClientSecretDev
+                  value: myImplClientSecret
                 - name: implRespTimeout
                   type: String
                   value: '30000'
@@ -325,7 +331,7 @@ inputSet:
                   value: 30s
                 - name: openshiftProject
                   type: String
-                  value: fgw-party-qa
+                  value: fgw-marketing-qazb
                 - name: Hostname
                   type: String
                   value: '""'
@@ -338,17 +344,18 @@ inputSet:
                 when:
                   condition: 'true'
         - stage:
-            identifier: GoNoGo_Approval
+            identifier: Approval_for_prodz
             type: Approval
             spec:
               execution:
                 steps:
                 - step:
-                    identifier: GoNoGo_Approval
+                    identifier: Approval_for_prodz
                     type: HarnessApproval
                     spec:
                       approvers:
-                        userGroups: ''
+                        userGroups:
+                        - account.HARN_API_ADM
         - stage:
             identifier: prodza
             template:
@@ -384,13 +391,13 @@ inputSet:
                   value: ''
                 - name: slaTiersBasicMaxReq
                   type: String
-                  value: ''
+                  value: '100'
                 - name: slaTiersGoldMaxReq
                   type: String
-                  value: ''
+                  value: '100'
                 - name: slaTiersPlatinumMaxReq
                   type: String
-                  value: ''
+                  value: '100'
                 - name: slaTiersUnlimitedMaxReq
                   type: String
                   value: ''
@@ -423,7 +430,7 @@ inputSet:
                   value: ''
                 - name: implPath
                   type: String
-                  value: ''
+                  value: /
                 - name: implAuthHeader
                   type: String
                   value: ''
@@ -435,7 +442,7 @@ inputSet:
                   value: ''
                 - name: implRespTimeout
                   type: String
-                  value: ''
+                  value: '30000'
                 - name: dataCenter
                   type: String
                   value: ''
@@ -455,7 +462,7 @@ inputSet:
                   type: String
                   value: tls-context
                 when:
-                  condition: 'false'
+                  condition: 'true'
         - stage:
             identifier: prodzb
             template:
@@ -491,13 +498,13 @@ inputSet:
                   value: ''
                 - name: slaTiersBasicMaxReq
                   type: String
-                  value: ''
+                  value: '100'
                 - name: slaTiersGoldMaxReq
                   type: String
-                  value: ''
+                  value: '100'
                 - name: slaTiersPlatinumMaxReq
                   type: String
-                  value: ''
+                  value: '100'
                 - name: slaTiersUnlimitedMaxReq
                   type: String
                   value: ''
@@ -530,7 +537,7 @@ inputSet:
                   value: ''
                 - name: implPath
                   type: String
-                  value: ''
+                  value: /
                 - name: implAuthHeader
                   type: String
                   value: ''
@@ -542,7 +549,7 @@ inputSet:
                   value: ''
                 - name: implRespTimeout
                   type: String
-                  value: ''
+                  value: '30000'
                 - name: dataCenter
                   type: String
                   value: ''
@@ -562,7 +569,7 @@ inputSet:
                   type: String
                   value: tls-context
                 when:
-                  condition: 'false'
+                  condition: 'true'
         - stage:
             identifier: Closing_Approval
             type: Approval

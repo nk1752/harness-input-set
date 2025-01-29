@@ -1,0 +1,2775 @@
+- inputSet:
+    name: regions-rates-sys-proxy
+    tages: {}
+    identifier: regionsratessysproxy
+    orgIdentifier: regionsappdev
+    projectIdentifier: rdc
+    pipeline:
+      identifier: Flex_Gateway_Proxy_Deployment
+      template:
+        templateInputs:
+          stages:
+            variables:
+            - name: apBusinessGroupName
+              type: String
+              value: ''
+            - name: fgwInstanceName
+              type: String
+              value: ''
+            - name: apiSpecAssetId
+              type: String
+              value: ''
+            - name: apClientId
+              type: Secret
+              value: ''
+            - name: apClientSecret
+              type: Secret
+              value: ''
+            - name: apEnvName
+              type: String
+              value: ''
+            - name: apiSpecAssetVersion
+              type: String
+              value: 1.0.0
+            - name: policy
+              type: String
+              value: ''
+            - name: slaTiersSingleTier
+              type: String
+              value: ''
+            - name: slaTiersBasicMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersGoldMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersPlatinumMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersUnlimitedMaxReq
+              type: String
+              value: ''
+            - name: apiEnv
+              type: String
+              value: qa
+            - name: apiVersion
+              type: String
+              value: v1
+            - name: apiLabel
+              type: String
+              value: ''
+            - name: extClientProvider
+              type: String
+              value: ''
+            - name: dnsGlobal
+              type: String
+              value: ''
+            - name: dnsLocal
+              type: String
+              value: ''
+            - name: implHost
+              type: String
+              value: ''
+            - name: implProtocol
+              type: String
+              value: https
+            - name: implPort
+              type: String
+              value: '443'
+            - name: implPath
+              type: String
+              value: /
+            - name: implAuthHeader
+              type: String
+              value: ''
+            - name: implClientId
+              type: Secret
+              value: ''
+            - name: implClientSecret
+              type: Secret
+              value: ''
+            - name: implRespTimeout
+              type: String
+              value: '30000'
+            - name: dataCenter
+              type: String
+              value: ''
+            - name: fgwTimeout
+              type: String
+              value: 30s
+            - name: openshiftProject
+              type: String
+              value: ''
+            - name: Hostname
+              type: String
+              value: '""'
+            - name: implTlsSecretGroup
+              type: String
+              value: tls-secret-group
+            - name: implTlsContext
+              type: String
+              value: tls-context
+- inputSet:
+    name: rdc-capi-sys-proxy
+    tages: {}
+    identifier: rdccapisysproxy
+    orgIdentifier: regionsappdev
+    projectIdentifier: rdc
+    pipeline:
+      identifier: Flex_Gateway_Proxy_Deployment
+      template:
+        templateInputs:
+          stages:
+            variables:
+            - name: apBusinessGroupName
+              type: String
+              value: ''
+            - name: fgwInstanceName
+              type: String
+              value: ''
+            - name: apiSpecAssetId
+              type: String
+              value: ''
+            - name: apClientId
+              type: Secret
+              value: ''
+            - name: apClientSecret
+              type: Secret
+              value: ''
+            - name: apEnvName
+              type: String
+              value: ''
+            - name: apiSpecAssetVersion
+              type: String
+              value: 1.0.0
+            - name: policy
+              type: String
+              value: ''
+            - name: slaTiersSingleTier
+              type: String
+              value: ''
+            - name: slaTiersBasicMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersGoldMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersPlatinumMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersUnlimitedMaxReq
+              type: String
+              value: ''
+            - name: apiEnv
+              type: String
+              value: qa
+            - name: apiVersion
+              type: String
+              value: v1
+            - name: apiLabel
+              type: String
+              value: ''
+            - name: extClientProvider
+              type: String
+              value: ''
+            - name: dnsGlobal
+              type: String
+              value: ''
+            - name: dnsLocal
+              type: String
+              value: ''
+            - name: implHost
+              type: String
+              value: ''
+            - name: implProtocol
+              type: String
+              value: https
+            - name: implPort
+              type: String
+              value: '443'
+            - name: implPath
+              type: String
+              value: /
+            - name: implAuthHeader
+              type: String
+              value: ''
+            - name: implClientId
+              type: Secret
+              value: ''
+            - name: implClientSecret
+              type: Secret
+              value: ''
+            - name: implRespTimeout
+              type: String
+              value: '30000'
+            - name: dataCenter
+              type: String
+              value: ''
+            - name: fgwTimeout
+              type: String
+              value: 30s
+            - name: openshiftProject
+              type: String
+              value: ''
+            - name: Hostname
+              type: String
+              value: '""'
+            - name: implTlsSecretGroup
+              type: String
+              value: tls-secret-group
+            - name: implTlsContext
+              type: String
+              value: tls-context
+- inputSet:
+    name: rdc-capi-sys-proxy
+    tages: {}
+    identifier: rdccapisysproxy
+    orgIdentifier: regionsappdev
+    projectIdentifier: rdc
+    pipeline:
+      identifier: Flex_Gateway_Proxy_Deployment
+      template:
+        templateInputs:
+          stages:
+            variables:
+            - name: apBusinessGroupName
+              type: String
+              value: ''
+            - name: fgwInstanceName
+              type: String
+              value: ''
+            - name: apiSpecAssetId
+              type: String
+              value: ''
+            - name: apClientId
+              type: Secret
+              value: ''
+            - name: apClientSecret
+              type: Secret
+              value: ''
+            - name: apEnvName
+              type: String
+              value: ''
+            - name: apiSpecAssetVersion
+              type: String
+              value: 1.0.0
+            - name: policy
+              type: String
+              value: ''
+            - name: slaTiersSingleTier
+              type: String
+              value: ''
+            - name: slaTiersBasicMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersGoldMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersPlatinumMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersUnlimitedMaxReq
+              type: String
+              value: ''
+            - name: apiEnv
+              type: String
+              value: qa
+            - name: apiVersion
+              type: String
+              value: v1
+            - name: apiLabel
+              type: String
+              value: ''
+            - name: extClientProvider
+              type: String
+              value: ''
+            - name: dnsGlobal
+              type: String
+              value: ''
+            - name: dnsLocal
+              type: String
+              value: ''
+            - name: implHost
+              type: String
+              value: ''
+            - name: implProtocol
+              type: String
+              value: https
+            - name: implPort
+              type: String
+              value: '443'
+            - name: implPath
+              type: String
+              value: /
+            - name: implAuthHeader
+              type: String
+              value: ''
+            - name: implClientId
+              type: Secret
+              value: ''
+            - name: implClientSecret
+              type: Secret
+              value: ''
+            - name: implRespTimeout
+              type: String
+              value: '30000'
+            - name: dataCenter
+              type: String
+              value: ''
+            - name: fgwTimeout
+              type: String
+              value: 30s
+            - name: openshiftProject
+              type: String
+              value: ''
+            - name: Hostname
+              type: String
+              value: '""'
+            - name: implTlsSecretGroup
+              type: String
+              value: tls-secret-group
+            - name: implTlsContext
+              type: String
+              value: tls-context
+- inputSet:
+    name: rdc-capi-sys-proxy
+    tages: {}
+    identifier: rdccapisysproxy
+    orgIdentifier: regionsappdev
+    projectIdentifier: rdc
+    pipeline:
+      identifier: Flex_Gateway_Proxy_Deployment
+      template:
+        templateInputs:
+          stages:
+            variables:
+            - name: apBusinessGroupName
+              type: String
+              value: ''
+            - name: fgwInstanceName
+              type: String
+              value: ''
+            - name: apiSpecAssetId
+              type: String
+              value: ''
+            - name: apClientId
+              type: Secret
+              value: ''
+            - name: apClientSecret
+              type: Secret
+              value: ''
+            - name: apEnvName
+              type: String
+              value: ''
+            - name: apiSpecAssetVersion
+              type: String
+              value: 1.0.0
+            - name: policy
+              type: String
+              value: ''
+            - name: slaTiersSingleTier
+              type: String
+              value: ''
+            - name: slaTiersBasicMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersGoldMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersPlatinumMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersUnlimitedMaxReq
+              type: String
+              value: ''
+            - name: apiEnv
+              type: String
+              value: qa
+            - name: apiVersion
+              type: String
+              value: v1
+            - name: apiLabel
+              type: String
+              value: ''
+            - name: extClientProvider
+              type: String
+              value: ''
+            - name: dnsGlobal
+              type: String
+              value: ''
+            - name: dnsLocal
+              type: String
+              value: ''
+            - name: implHost
+              type: String
+              value: ''
+            - name: implProtocol
+              type: String
+              value: https
+            - name: implPort
+              type: String
+              value: '443'
+            - name: implPath
+              type: String
+              value: /
+            - name: implAuthHeader
+              type: String
+              value: ''
+            - name: implClientId
+              type: Secret
+              value: ''
+            - name: implClientSecret
+              type: Secret
+              value: ''
+            - name: implRespTimeout
+              type: String
+              value: '30000'
+            - name: dataCenter
+              type: String
+              value: ''
+            - name: fgwTimeout
+              type: String
+              value: 30s
+            - name: openshiftProject
+              type: String
+              value: ''
+            - name: Hostname
+              type: String
+              value: '""'
+            - name: implTlsSecretGroup
+              type: String
+              value: tls-secret-group
+            - name: implTlsContext
+              type: String
+              value: tls-context
+- inputSet:
+    name: rdc-capi-sys-proxy
+    tages: {}
+    identifier: rdccapisysproxy
+    orgIdentifier: regionsappdev
+    projectIdentifier: rdc
+    pipeline:
+      identifier: Flex_Gateway_Proxy_Deployment
+      template:
+        templateInputs:
+          stages:
+            variables:
+            - name: apBusinessGroupName
+              type: String
+              value: ''
+            - name: fgwInstanceName
+              type: String
+              value: ''
+            - name: apiSpecAssetId
+              type: String
+              value: ''
+            - name: apClientId
+              type: Secret
+              value: ''
+            - name: apClientSecret
+              type: Secret
+              value: ''
+            - name: apEnvName
+              type: String
+              value: ''
+            - name: apiSpecAssetVersion
+              type: String
+              value: 1.0.0
+            - name: policy
+              type: String
+              value: ''
+            - name: slaTiersSingleTier
+              type: String
+              value: ''
+            - name: slaTiersBasicMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersGoldMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersPlatinumMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersUnlimitedMaxReq
+              type: String
+              value: ''
+            - name: apiEnv
+              type: String
+              value: qa
+            - name: apiVersion
+              type: String
+              value: v1
+            - name: apiLabel
+              type: String
+              value: ''
+            - name: extClientProvider
+              type: String
+              value: ''
+            - name: dnsGlobal
+              type: String
+              value: ''
+            - name: dnsLocal
+              type: String
+              value: ''
+            - name: implHost
+              type: String
+              value: ''
+            - name: implProtocol
+              type: String
+              value: https
+            - name: implPort
+              type: String
+              value: '443'
+            - name: implPath
+              type: String
+              value: /
+            - name: implAuthHeader
+              type: String
+              value: ''
+            - name: implClientId
+              type: Secret
+              value: ''
+            - name: implClientSecret
+              type: Secret
+              value: ''
+            - name: implRespTimeout
+              type: String
+              value: '30000'
+            - name: dataCenter
+              type: String
+              value: ''
+            - name: fgwTimeout
+              type: String
+              value: 30s
+            - name: openshiftProject
+              type: String
+              value: ''
+            - name: Hostname
+              type: String
+              value: '""'
+            - name: implTlsSecretGroup
+              type: String
+              value: tls-secret-group
+            - name: implTlsContext
+              type: String
+              value: tls-context
+- inputSet:
+    name: regions-rates-sys-proxy
+    tages: {}
+    identifier: regionsratessysproxy
+    orgIdentifier: regionsappdev
+    projectIdentifier: rdc
+    pipeline:
+      identifier: Flex_Gateway_Proxy_Deployment
+      template:
+        templateInputs:
+          stages:
+            variables:
+            - name: apBusinessGroupName
+              type: String
+              value: ''
+            - name: fgwInstanceName
+              type: String
+              value: ''
+            - name: apiSpecAssetId
+              type: String
+              value: ''
+            - name: apClientId
+              type: Secret
+              value: ''
+            - name: apClientSecret
+              type: Secret
+              value: ''
+            - name: apEnvName
+              type: String
+              value: ''
+            - name: apiSpecAssetVersion
+              type: String
+              value: 1.0.0
+            - name: policy
+              type: String
+              value: ''
+            - name: slaTiersSingleTier
+              type: String
+              value: ''
+            - name: slaTiersBasicMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersGoldMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersPlatinumMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersUnlimitedMaxReq
+              type: String
+              value: ''
+            - name: apiEnv
+              type: String
+              value: qa
+            - name: apiVersion
+              type: String
+              value: v1
+            - name: apiLabel
+              type: String
+              value: ''
+            - name: extClientProvider
+              type: String
+              value: ''
+            - name: dnsGlobal
+              type: String
+              value: ''
+            - name: dnsLocal
+              type: String
+              value: ''
+            - name: implHost
+              type: String
+              value: ''
+            - name: implProtocol
+              type: String
+              value: https
+            - name: implPort
+              type: String
+              value: '443'
+            - name: implPath
+              type: String
+              value: /
+            - name: implAuthHeader
+              type: String
+              value: ''
+            - name: implClientId
+              type: Secret
+              value: ''
+            - name: implClientSecret
+              type: Secret
+              value: ''
+            - name: implRespTimeout
+              type: String
+              value: '30000'
+            - name: dataCenter
+              type: String
+              value: ''
+            - name: fgwTimeout
+              type: String
+              value: 30s
+            - name: openshiftProject
+              type: String
+              value: ''
+            - name: Hostname
+              type: String
+              value: '""'
+            - name: implTlsSecretGroup
+              type: String
+              value: tls-secret-group
+            - name: implTlsContext
+              type: String
+              value: tls-context
+- inputSet:
+    name: rdc-capi-sys-proxy
+    tages: {}
+    identifier: rdccapisysproxy
+    orgIdentifier: regionsappdev
+    projectIdentifier: rdc
+    pipeline:
+      identifier: Flex_Gateway_Proxy_Deployment
+      template:
+        templateInputs:
+          stages:
+            variables:
+            - name: apBusinessGroupName
+              type: String
+              value: ''
+            - name: fgwInstanceName
+              type: String
+              value: ''
+            - name: apiSpecAssetId
+              type: String
+              value: ''
+            - name: apClientId
+              type: Secret
+              value: ''
+            - name: apClientSecret
+              type: Secret
+              value: ''
+            - name: apEnvName
+              type: String
+              value: ''
+            - name: apiSpecAssetVersion
+              type: String
+              value: 1.0.0
+            - name: policy
+              type: String
+              value: ''
+            - name: slaTiersSingleTier
+              type: String
+              value: ''
+            - name: slaTiersBasicMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersGoldMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersPlatinumMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersUnlimitedMaxReq
+              type: String
+              value: ''
+            - name: apiEnv
+              type: String
+              value: qa
+            - name: apiVersion
+              type: String
+              value: v1
+            - name: apiLabel
+              type: String
+              value: ''
+            - name: extClientProvider
+              type: String
+              value: ''
+            - name: dnsGlobal
+              type: String
+              value: ''
+            - name: dnsLocal
+              type: String
+              value: ''
+            - name: implHost
+              type: String
+              value: ''
+            - name: implProtocol
+              type: String
+              value: https
+            - name: implPort
+              type: String
+              value: '443'
+            - name: implPath
+              type: String
+              value: /
+            - name: implAuthHeader
+              type: String
+              value: ''
+            - name: implClientId
+              type: Secret
+              value: ''
+            - name: implClientSecret
+              type: Secret
+              value: ''
+            - name: implRespTimeout
+              type: String
+              value: '30000'
+            - name: dataCenter
+              type: String
+              value: ''
+            - name: fgwTimeout
+              type: String
+              value: 30s
+            - name: openshiftProject
+              type: String
+              value: ''
+            - name: Hostname
+              type: String
+              value: '""'
+            - name: implTlsSecretGroup
+              type: String
+              value: tls-secret-group
+            - name: implTlsContext
+              type: String
+              value: tls-context
+- inputSet:
+    name: regions-locator-sys-proxy
+    tages: {}
+    identifier: regionslocatorsysproxy
+    orgIdentifier: regionsappdev
+    projectIdentifier: rdc
+    pipeline:
+      identifier: Flex_Gateway_Proxy_Deployment
+      template:
+        templateInputs:
+          stages:
+            variables:
+            - name: apBusinessGroupName
+              type: String
+              value: ''
+            - name: fgwInstanceName
+              type: String
+              value: ''
+            - name: apiSpecAssetId
+              type: String
+              value: ''
+            - name: apClientId
+              type: Secret
+              value: ''
+            - name: apClientSecret
+              type: Secret
+              value: ''
+            - name: apEnvName
+              type: String
+              value: ''
+            - name: apiSpecAssetVersion
+              type: String
+              value: 1.0.0
+            - name: policy
+              type: String
+              value: ''
+            - name: slaTiersSingleTier
+              type: String
+              value: ''
+            - name: slaTiersBasicMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersGoldMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersPlatinumMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersUnlimitedMaxReq
+              type: String
+              value: ''
+            - name: apiEnv
+              type: String
+              value: qa
+            - name: apiVersion
+              type: String
+              value: v1
+            - name: apiLabel
+              type: String
+              value: ''
+            - name: extClientProvider
+              type: String
+              value: ''
+            - name: dnsGlobal
+              type: String
+              value: ''
+            - name: dnsLocal
+              type: String
+              value: ''
+            - name: implHost
+              type: String
+              value: ''
+            - name: implProtocol
+              type: String
+              value: https
+            - name: implPort
+              type: String
+              value: '443'
+            - name: implPath
+              type: String
+              value: /
+            - name: implAuthHeader
+              type: String
+              value: ''
+            - name: implClientId
+              type: Secret
+              value: ''
+            - name: implClientSecret
+              type: Secret
+              value: ''
+            - name: implRespTimeout
+              type: String
+              value: '30000'
+            - name: dataCenter
+              type: String
+              value: ''
+            - name: fgwTimeout
+              type: String
+              value: 30s
+            - name: openshiftProject
+              type: String
+              value: ''
+            - name: Hostname
+              type: String
+              value: '""'
+            - name: implTlsSecretGroup
+              type: String
+              value: tls-secret-group
+            - name: implTlsContext
+              type: String
+              value: tls-context
+- inputSet:
+    name: regions-locator-sys-proxy
+    tages: {}
+    identifier: regionslocatorsysproxy
+    orgIdentifier: regionsappdev
+    projectIdentifier: rdc
+    pipeline:
+      identifier: Flex_Gateway_Proxy_Deployment
+      template:
+        templateInputs:
+          stages:
+            variables:
+            - name: apBusinessGroupName
+              type: String
+              value: ''
+            - name: fgwInstanceName
+              type: String
+              value: ''
+            - name: apiSpecAssetId
+              type: String
+              value: ''
+            - name: apClientId
+              type: Secret
+              value: ''
+            - name: apClientSecret
+              type: Secret
+              value: ''
+            - name: apEnvName
+              type: String
+              value: ''
+            - name: apiSpecAssetVersion
+              type: String
+              value: 1.0.0
+            - name: policy
+              type: String
+              value: ''
+            - name: slaTiersSingleTier
+              type: String
+              value: ''
+            - name: slaTiersBasicMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersGoldMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersPlatinumMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersUnlimitedMaxReq
+              type: String
+              value: ''
+            - name: apiEnv
+              type: String
+              value: qa
+            - name: apiVersion
+              type: String
+              value: v1
+            - name: apiLabel
+              type: String
+              value: ''
+            - name: extClientProvider
+              type: String
+              value: ''
+            - name: dnsGlobal
+              type: String
+              value: ''
+            - name: dnsLocal
+              type: String
+              value: ''
+            - name: implHost
+              type: String
+              value: ''
+            - name: implProtocol
+              type: String
+              value: https
+            - name: implPort
+              type: String
+              value: '443'
+            - name: implPath
+              type: String
+              value: /
+            - name: implAuthHeader
+              type: String
+              value: ''
+            - name: implClientId
+              type: Secret
+              value: ''
+            - name: implClientSecret
+              type: Secret
+              value: ''
+            - name: implRespTimeout
+              type: String
+              value: '30000'
+            - name: dataCenter
+              type: String
+              value: ''
+            - name: fgwTimeout
+              type: String
+              value: 30s
+            - name: openshiftProject
+              type: String
+              value: ''
+            - name: Hostname
+              type: String
+              value: '""'
+            - name: implTlsSecretGroup
+              type: String
+              value: tls-secret-group
+            - name: implTlsContext
+              type: String
+              value: tls-context
+- inputSet:
+    name: rdc-capi-sys-proxy
+    tages: {}
+    identifier: rdccapisysproxy
+    orgIdentifier: regionsappdev
+    projectIdentifier: rdc
+    pipeline:
+      identifier: Flex_Gateway_Proxy_Deployment
+      template:
+        templateInputs:
+          stages:
+            variables:
+            - name: apBusinessGroupName
+              type: String
+              value: ''
+            - name: fgwInstanceName
+              type: String
+              value: ''
+            - name: apiSpecAssetId
+              type: String
+              value: ''
+            - name: apClientId
+              type: Secret
+              value: ''
+            - name: apClientSecret
+              type: Secret
+              value: ''
+            - name: apEnvName
+              type: String
+              value: ''
+            - name: apiSpecAssetVersion
+              type: String
+              value: 1.0.0
+            - name: policy
+              type: String
+              value: ''
+            - name: slaTiersSingleTier
+              type: String
+              value: ''
+            - name: slaTiersBasicMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersGoldMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersPlatinumMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersUnlimitedMaxReq
+              type: String
+              value: ''
+            - name: apiEnv
+              type: String
+              value: qa
+            - name: apiVersion
+              type: String
+              value: v1
+            - name: apiLabel
+              type: String
+              value: ''
+            - name: extClientProvider
+              type: String
+              value: ''
+            - name: dnsGlobal
+              type: String
+              value: ''
+            - name: dnsLocal
+              type: String
+              value: ''
+            - name: implHost
+              type: String
+              value: ''
+            - name: implProtocol
+              type: String
+              value: https
+            - name: implPort
+              type: String
+              value: '443'
+            - name: implPath
+              type: String
+              value: /
+            - name: implAuthHeader
+              type: String
+              value: ''
+            - name: implClientId
+              type: Secret
+              value: ''
+            - name: implClientSecret
+              type: Secret
+              value: ''
+            - name: implRespTimeout
+              type: String
+              value: '30000'
+            - name: dataCenter
+              type: String
+              value: ''
+            - name: fgwTimeout
+              type: String
+              value: 30s
+            - name: openshiftProject
+              type: String
+              value: ''
+            - name: Hostname
+              type: String
+              value: '""'
+            - name: implTlsSecretGroup
+              type: String
+              value: tls-secret-group
+            - name: implTlsContext
+              type: String
+              value: tls-context
+- inputSet:
+    name: rdc-capi-sys-proxy
+    tages: {}
+    identifier: rdccapisysproxy
+    orgIdentifier: regionsappdev
+    projectIdentifier: rdc
+    pipeline:
+      identifier: Flex_Gateway_Proxy_Deployment
+      template:
+        templateInputs:
+          stages:
+            variables:
+            - name: apBusinessGroupName
+              type: String
+              value: ''
+            - name: fgwInstanceName
+              type: String
+              value: ''
+            - name: apiSpecAssetId
+              type: String
+              value: ''
+            - name: apClientId
+              type: Secret
+              value: ''
+            - name: apClientSecret
+              type: Secret
+              value: ''
+            - name: apEnvName
+              type: String
+              value: ''
+            - name: apiSpecAssetVersion
+              type: String
+              value: 1.0.0
+            - name: policy
+              type: String
+              value: ''
+            - name: slaTiersSingleTier
+              type: String
+              value: ''
+            - name: slaTiersBasicMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersGoldMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersPlatinumMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersUnlimitedMaxReq
+              type: String
+              value: ''
+            - name: apiEnv
+              type: String
+              value: qa
+            - name: apiVersion
+              type: String
+              value: v1
+            - name: apiLabel
+              type: String
+              value: ''
+            - name: extClientProvider
+              type: String
+              value: ''
+            - name: dnsGlobal
+              type: String
+              value: ''
+            - name: dnsLocal
+              type: String
+              value: ''
+            - name: implHost
+              type: String
+              value: ''
+            - name: implProtocol
+              type: String
+              value: https
+            - name: implPort
+              type: String
+              value: '443'
+            - name: implPath
+              type: String
+              value: /
+            - name: implAuthHeader
+              type: String
+              value: ''
+            - name: implClientId
+              type: Secret
+              value: ''
+            - name: implClientSecret
+              type: Secret
+              value: ''
+            - name: implRespTimeout
+              type: String
+              value: '30000'
+            - name: dataCenter
+              type: String
+              value: ''
+            - name: fgwTimeout
+              type: String
+              value: 30s
+            - name: openshiftProject
+              type: String
+              value: ''
+            - name: Hostname
+              type: String
+              value: '""'
+            - name: implTlsSecretGroup
+              type: String
+              value: tls-secret-group
+            - name: implTlsContext
+              type: String
+              value: tls-context
+- inputSet:
+    name: rdc-capi-sys-proxy
+    tages: {}
+    identifier: rdccapisysproxy
+    orgIdentifier: regionsappdev
+    projectIdentifier: rdc
+    pipeline:
+      identifier: Flex_Gateway_Proxy_Deployment
+      template:
+        templateInputs:
+          stages:
+            variables:
+            - name: apBusinessGroupName
+              type: String
+              value: ''
+            - name: fgwInstanceName
+              type: String
+              value: ''
+            - name: apiSpecAssetId
+              type: String
+              value: ''
+            - name: apClientId
+              type: Secret
+              value: ''
+            - name: apClientSecret
+              type: Secret
+              value: ''
+            - name: apEnvName
+              type: String
+              value: ''
+            - name: apiSpecAssetVersion
+              type: String
+              value: 1.0.0
+            - name: policy
+              type: String
+              value: ''
+            - name: slaTiersSingleTier
+              type: String
+              value: ''
+            - name: slaTiersBasicMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersGoldMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersPlatinumMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersUnlimitedMaxReq
+              type: String
+              value: ''
+            - name: apiEnv
+              type: String
+              value: qa
+            - name: apiVersion
+              type: String
+              value: v1
+            - name: apiLabel
+              type: String
+              value: ''
+            - name: extClientProvider
+              type: String
+              value: ''
+            - name: dnsGlobal
+              type: String
+              value: ''
+            - name: dnsLocal
+              type: String
+              value: ''
+            - name: implHost
+              type: String
+              value: ''
+            - name: implProtocol
+              type: String
+              value: https
+            - name: implPort
+              type: String
+              value: '443'
+            - name: implPath
+              type: String
+              value: /
+            - name: implAuthHeader
+              type: String
+              value: ''
+            - name: implClientId
+              type: Secret
+              value: ''
+            - name: implClientSecret
+              type: Secret
+              value: ''
+            - name: implRespTimeout
+              type: String
+              value: '30000'
+            - name: dataCenter
+              type: String
+              value: ''
+            - name: fgwTimeout
+              type: String
+              value: 30s
+            - name: openshiftProject
+              type: String
+              value: ''
+            - name: Hostname
+              type: String
+              value: '""'
+            - name: implTlsSecretGroup
+              type: String
+              value: tls-secret-group
+            - name: implTlsContext
+              type: String
+              value: tls-context
+- inputSet:
+    name: regions-rates-sys-proxy
+    tages: {}
+    identifier: regionsratessysproxy
+    orgIdentifier: regionsappdev
+    projectIdentifier: rdc
+    pipeline:
+      identifier: Flex_Gateway_Proxy_Deployment
+      template:
+        templateInputs:
+          stages:
+            variables:
+            - name: apBusinessGroupName
+              type: String
+              value: ''
+            - name: fgwInstanceName
+              type: String
+              value: ''
+            - name: apiSpecAssetId
+              type: String
+              value: ''
+            - name: apClientId
+              type: Secret
+              value: ''
+            - name: apClientSecret
+              type: Secret
+              value: ''
+            - name: apEnvName
+              type: String
+              value: ''
+            - name: apiSpecAssetVersion
+              type: String
+              value: 1.0.0
+            - name: policy
+              type: String
+              value: ''
+            - name: slaTiersSingleTier
+              type: String
+              value: ''
+            - name: slaTiersBasicMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersGoldMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersPlatinumMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersUnlimitedMaxReq
+              type: String
+              value: ''
+            - name: apiEnv
+              type: String
+              value: qa
+            - name: apiVersion
+              type: String
+              value: v1
+            - name: apiLabel
+              type: String
+              value: ''
+            - name: extClientProvider
+              type: String
+              value: ''
+            - name: dnsGlobal
+              type: String
+              value: ''
+            - name: dnsLocal
+              type: String
+              value: ''
+            - name: implHost
+              type: String
+              value: ''
+            - name: implProtocol
+              type: String
+              value: https
+            - name: implPort
+              type: String
+              value: '443'
+            - name: implPath
+              type: String
+              value: /
+            - name: implAuthHeader
+              type: String
+              value: ''
+            - name: implClientId
+              type: Secret
+              value: ''
+            - name: implClientSecret
+              type: Secret
+              value: ''
+            - name: implRespTimeout
+              type: String
+              value: '30000'
+            - name: dataCenter
+              type: String
+              value: ''
+            - name: fgwTimeout
+              type: String
+              value: 30s
+            - name: openshiftProject
+              type: String
+              value: ''
+            - name: Hostname
+              type: String
+              value: '""'
+            - name: implTlsSecretGroup
+              type: String
+              value: tls-secret-group
+            - name: implTlsContext
+              type: String
+              value: tls-context
+- inputSet:
+    name: regions-locator-sys-proxy
+    tages: {}
+    identifier: regionslocatorsysproxy
+    orgIdentifier: regionsappdev
+    projectIdentifier: rdc
+    pipeline:
+      identifier: Flex_Gateway_Proxy_Deployment
+      template:
+        templateInputs:
+          stages:
+            variables:
+            - name: apBusinessGroupName
+              type: String
+              value: ''
+            - name: fgwInstanceName
+              type: String
+              value: ''
+            - name: apiSpecAssetId
+              type: String
+              value: ''
+            - name: apClientId
+              type: Secret
+              value: ''
+            - name: apClientSecret
+              type: Secret
+              value: ''
+            - name: apEnvName
+              type: String
+              value: ''
+            - name: apiSpecAssetVersion
+              type: String
+              value: 1.0.0
+            - name: policy
+              type: String
+              value: ''
+            - name: slaTiersSingleTier
+              type: String
+              value: ''
+            - name: slaTiersBasicMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersGoldMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersPlatinumMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersUnlimitedMaxReq
+              type: String
+              value: ''
+            - name: apiEnv
+              type: String
+              value: qa
+            - name: apiVersion
+              type: String
+              value: v1
+            - name: apiLabel
+              type: String
+              value: ''
+            - name: extClientProvider
+              type: String
+              value: ''
+            - name: dnsGlobal
+              type: String
+              value: ''
+            - name: dnsLocal
+              type: String
+              value: ''
+            - name: implHost
+              type: String
+              value: ''
+            - name: implProtocol
+              type: String
+              value: https
+            - name: implPort
+              type: String
+              value: '443'
+            - name: implPath
+              type: String
+              value: /
+            - name: implAuthHeader
+              type: String
+              value: ''
+            - name: implClientId
+              type: Secret
+              value: ''
+            - name: implClientSecret
+              type: Secret
+              value: ''
+            - name: implRespTimeout
+              type: String
+              value: '30000'
+            - name: dataCenter
+              type: String
+              value: ''
+            - name: fgwTimeout
+              type: String
+              value: 30s
+            - name: openshiftProject
+              type: String
+              value: ''
+            - name: Hostname
+              type: String
+              value: '""'
+            - name: implTlsSecretGroup
+              type: String
+              value: tls-secret-group
+            - name: implTlsContext
+              type: String
+              value: tls-context
+- inputSet:
+    name: rdc-capi-sys-proxy
+    tages: {}
+    identifier: rdccapisysproxy
+    orgIdentifier: regionsappdev
+    projectIdentifier: rdc
+    pipeline:
+      identifier: Flex_Gateway_Proxy_Deployment
+      template:
+        templateInputs:
+          stages:
+            variables:
+            - name: apBusinessGroupName
+              type: String
+              value: ''
+            - name: fgwInstanceName
+              type: String
+              value: ''
+            - name: apiSpecAssetId
+              type: String
+              value: ''
+            - name: apClientId
+              type: Secret
+              value: ''
+            - name: apClientSecret
+              type: Secret
+              value: ''
+            - name: apEnvName
+              type: String
+              value: ''
+            - name: apiSpecAssetVersion
+              type: String
+              value: 1.0.0
+            - name: policy
+              type: String
+              value: ''
+            - name: slaTiersSingleTier
+              type: String
+              value: ''
+            - name: slaTiersBasicMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersGoldMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersPlatinumMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersUnlimitedMaxReq
+              type: String
+              value: ''
+            - name: apiEnv
+              type: String
+              value: qa
+            - name: apiVersion
+              type: String
+              value: v1
+            - name: apiLabel
+              type: String
+              value: ''
+            - name: extClientProvider
+              type: String
+              value: ''
+            - name: dnsGlobal
+              type: String
+              value: ''
+            - name: dnsLocal
+              type: String
+              value: ''
+            - name: implHost
+              type: String
+              value: ''
+            - name: implProtocol
+              type: String
+              value: https
+            - name: implPort
+              type: String
+              value: '443'
+            - name: implPath
+              type: String
+              value: /
+            - name: implAuthHeader
+              type: String
+              value: ''
+            - name: implClientId
+              type: Secret
+              value: ''
+            - name: implClientSecret
+              type: Secret
+              value: ''
+            - name: implRespTimeout
+              type: String
+              value: '30000'
+            - name: dataCenter
+              type: String
+              value: ''
+            - name: fgwTimeout
+              type: String
+              value: 30s
+            - name: openshiftProject
+              type: String
+              value: ''
+            - name: Hostname
+              type: String
+              value: '""'
+            - name: implTlsSecretGroup
+              type: String
+              value: tls-secret-group
+            - name: implTlsContext
+              type: String
+              value: tls-context
+- inputSet:
+    name: regions-locator-sys-proxy
+    tages: {}
+    identifier: regionslocatorsysproxy
+    orgIdentifier: regionsappdev
+    projectIdentifier: rdc
+    pipeline:
+      identifier: Flex_Gateway_Proxy_Deployment
+      template:
+        templateInputs:
+          stages:
+            variables:
+            - name: apBusinessGroupName
+              type: String
+              value: ''
+            - name: fgwInstanceName
+              type: String
+              value: ''
+            - name: apiSpecAssetId
+              type: String
+              value: ''
+            - name: apClientId
+              type: Secret
+              value: ''
+            - name: apClientSecret
+              type: Secret
+              value: ''
+            - name: apEnvName
+              type: String
+              value: ''
+            - name: apiSpecAssetVersion
+              type: String
+              value: 1.0.0
+            - name: policy
+              type: String
+              value: ''
+            - name: slaTiersSingleTier
+              type: String
+              value: ''
+            - name: slaTiersBasicMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersGoldMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersPlatinumMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersUnlimitedMaxReq
+              type: String
+              value: ''
+            - name: apiEnv
+              type: String
+              value: qa
+            - name: apiVersion
+              type: String
+              value: v1
+            - name: apiLabel
+              type: String
+              value: ''
+            - name: extClientProvider
+              type: String
+              value: ''
+            - name: dnsGlobal
+              type: String
+              value: ''
+            - name: dnsLocal
+              type: String
+              value: ''
+            - name: implHost
+              type: String
+              value: ''
+            - name: implProtocol
+              type: String
+              value: https
+            - name: implPort
+              type: String
+              value: '443'
+            - name: implPath
+              type: String
+              value: /
+            - name: implAuthHeader
+              type: String
+              value: ''
+            - name: implClientId
+              type: Secret
+              value: ''
+            - name: implClientSecret
+              type: Secret
+              value: ''
+            - name: implRespTimeout
+              type: String
+              value: '30000'
+            - name: dataCenter
+              type: String
+              value: ''
+            - name: fgwTimeout
+              type: String
+              value: 30s
+            - name: openshiftProject
+              type: String
+              value: ''
+            - name: Hostname
+              type: String
+              value: '""'
+            - name: implTlsSecretGroup
+              type: String
+              value: tls-secret-group
+            - name: implTlsContext
+              type: String
+              value: tls-context
+- inputSet:
+    name: rdc-capi-sys-proxy
+    tages: {}
+    identifier: rdccapisysproxy
+    orgIdentifier: regionsappdev
+    projectIdentifier: rdc
+    pipeline:
+      identifier: Flex_Gateway_Proxy_Deployment
+      template:
+        templateInputs:
+          stages:
+            variables:
+            - name: apBusinessGroupName
+              type: String
+              value: ''
+            - name: fgwInstanceName
+              type: String
+              value: ''
+            - name: apiSpecAssetId
+              type: String
+              value: ''
+            - name: apClientId
+              type: Secret
+              value: ''
+            - name: apClientSecret
+              type: Secret
+              value: ''
+            - name: apEnvName
+              type: String
+              value: ''
+            - name: apiSpecAssetVersion
+              type: String
+              value: 1.0.0
+            - name: policy
+              type: String
+              value: ''
+            - name: slaTiersSingleTier
+              type: String
+              value: ''
+            - name: slaTiersBasicMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersGoldMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersPlatinumMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersUnlimitedMaxReq
+              type: String
+              value: ''
+            - name: apiEnv
+              type: String
+              value: qa
+            - name: apiVersion
+              type: String
+              value: v1
+            - name: apiLabel
+              type: String
+              value: ''
+            - name: extClientProvider
+              type: String
+              value: ''
+            - name: dnsGlobal
+              type: String
+              value: ''
+            - name: dnsLocal
+              type: String
+              value: ''
+            - name: implHost
+              type: String
+              value: ''
+            - name: implProtocol
+              type: String
+              value: https
+            - name: implPort
+              type: String
+              value: '443'
+            - name: implPath
+              type: String
+              value: /
+            - name: implAuthHeader
+              type: String
+              value: ''
+            - name: implClientId
+              type: Secret
+              value: ''
+            - name: implClientSecret
+              type: Secret
+              value: ''
+            - name: implRespTimeout
+              type: String
+              value: '30000'
+            - name: dataCenter
+              type: String
+              value: ''
+            - name: fgwTimeout
+              type: String
+              value: 30s
+            - name: openshiftProject
+              type: String
+              value: ''
+            - name: Hostname
+              type: String
+              value: '""'
+            - name: implTlsSecretGroup
+              type: String
+              value: tls-secret-group
+            - name: implTlsContext
+              type: String
+              value: tls-context
+- inputSet:
+    name: rdc-capi-sys-proxy
+    tages: {}
+    identifier: rdccapisysproxy
+    orgIdentifier: regionsappdev
+    projectIdentifier: rdc
+    pipeline:
+      identifier: Flex_Gateway_Proxy_Deployment
+      template:
+        templateInputs:
+          stages:
+            variables:
+            - name: apBusinessGroupName
+              type: String
+              value: ''
+            - name: fgwInstanceName
+              type: String
+              value: ''
+            - name: apiSpecAssetId
+              type: String
+              value: ''
+            - name: apClientId
+              type: Secret
+              value: ''
+            - name: apClientSecret
+              type: Secret
+              value: ''
+            - name: apEnvName
+              type: String
+              value: ''
+            - name: apiSpecAssetVersion
+              type: String
+              value: 1.0.0
+            - name: policy
+              type: String
+              value: ''
+            - name: slaTiersSingleTier
+              type: String
+              value: ''
+            - name: slaTiersBasicMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersGoldMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersPlatinumMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersUnlimitedMaxReq
+              type: String
+              value: ''
+            - name: apiEnv
+              type: String
+              value: qa
+            - name: apiVersion
+              type: String
+              value: v1
+            - name: apiLabel
+              type: String
+              value: ''
+            - name: extClientProvider
+              type: String
+              value: ''
+            - name: dnsGlobal
+              type: String
+              value: ''
+            - name: dnsLocal
+              type: String
+              value: ''
+            - name: implHost
+              type: String
+              value: ''
+            - name: implProtocol
+              type: String
+              value: https
+            - name: implPort
+              type: String
+              value: '443'
+            - name: implPath
+              type: String
+              value: /
+            - name: implAuthHeader
+              type: String
+              value: ''
+            - name: implClientId
+              type: Secret
+              value: ''
+            - name: implClientSecret
+              type: Secret
+              value: ''
+            - name: implRespTimeout
+              type: String
+              value: '30000'
+            - name: dataCenter
+              type: String
+              value: ''
+            - name: fgwTimeout
+              type: String
+              value: 30s
+            - name: openshiftProject
+              type: String
+              value: ''
+            - name: Hostname
+              type: String
+              value: '""'
+            - name: implTlsSecretGroup
+              type: String
+              value: tls-secret-group
+            - name: implTlsContext
+              type: String
+              value: tls-context
+- inputSet:
+    name: rdc-capi-sys-proxy
+    tages: {}
+    identifier: rdccapisysproxy
+    orgIdentifier: regionsappdev
+    projectIdentifier: rdc
+    pipeline:
+      identifier: Flex_Gateway_Proxy_Deployment
+      template:
+        templateInputs:
+          stages:
+            variables:
+            - name: apBusinessGroupName
+              type: String
+              value: ''
+            - name: fgwInstanceName
+              type: String
+              value: ''
+            - name: apiSpecAssetId
+              type: String
+              value: ''
+            - name: apClientId
+              type: Secret
+              value: ''
+            - name: apClientSecret
+              type: Secret
+              value: ''
+            - name: apEnvName
+              type: String
+              value: ''
+            - name: apiSpecAssetVersion
+              type: String
+              value: 1.0.0
+            - name: policy
+              type: String
+              value: ''
+            - name: slaTiersSingleTier
+              type: String
+              value: ''
+            - name: slaTiersBasicMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersGoldMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersPlatinumMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersUnlimitedMaxReq
+              type: String
+              value: ''
+            - name: apiEnv
+              type: String
+              value: qa
+            - name: apiVersion
+              type: String
+              value: v1
+            - name: apiLabel
+              type: String
+              value: ''
+            - name: extClientProvider
+              type: String
+              value: ''
+            - name: dnsGlobal
+              type: String
+              value: ''
+            - name: dnsLocal
+              type: String
+              value: ''
+            - name: implHost
+              type: String
+              value: ''
+            - name: implProtocol
+              type: String
+              value: https
+            - name: implPort
+              type: String
+              value: '443'
+            - name: implPath
+              type: String
+              value: /
+            - name: implAuthHeader
+              type: String
+              value: ''
+            - name: implClientId
+              type: Secret
+              value: ''
+            - name: implClientSecret
+              type: Secret
+              value: ''
+            - name: implRespTimeout
+              type: String
+              value: '30000'
+            - name: dataCenter
+              type: String
+              value: ''
+            - name: fgwTimeout
+              type: String
+              value: 30s
+            - name: openshiftProject
+              type: String
+              value: ''
+            - name: Hostname
+              type: String
+              value: '""'
+            - name: implTlsSecretGroup
+              type: String
+              value: tls-secret-group
+            - name: implTlsContext
+              type: String
+              value: tls-context
+- inputSet:
+    name: mkt-ras-proxy
+    tages: {}
+    identifier: mktrasproxy
+    orgIdentifier: regionsappdev
+    projectIdentifier: rdc
+    pipeline:
+      identifier: Flex_Gateway_Proxy_Deployment
+      template:
+        templateInputs:
+          stages:
+            variables:
+            - name: apBusinessGroupName
+              type: String
+              value: ''
+            - name: fgwInstanceName
+              type: String
+              value: ''
+            - name: apiSpecAssetId
+              type: String
+              value: ''
+            - name: apClientId
+              type: Secret
+              value: ''
+            - name: apClientSecret
+              type: Secret
+              value: ''
+            - name: apEnvName
+              type: String
+              value: ''
+            - name: apiSpecAssetVersion
+              type: String
+              value: 1.0.0
+            - name: policy
+              type: String
+              value: ''
+            - name: slaTiersSingleTier
+              type: String
+              value: ''
+            - name: slaTiersBasicMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersGoldMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersPlatinumMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersUnlimitedMaxReq
+              type: String
+              value: ''
+            - name: apiEnv
+              type: String
+              value: qa
+            - name: apiVersion
+              type: String
+              value: v1
+            - name: apiLabel
+              type: String
+              value: ''
+            - name: extClientProvider
+              type: String
+              value: ''
+            - name: dnsGlobal
+              type: String
+              value: ''
+            - name: dnsLocal
+              type: String
+              value: ''
+            - name: implHost
+              type: String
+              value: ''
+            - name: implProtocol
+              type: String
+              value: https
+            - name: implPort
+              type: String
+              value: '443'
+            - name: implPath
+              type: String
+              value: /
+            - name: implAuthHeader
+              type: String
+              value: ''
+            - name: implClientId
+              type: Secret
+              value: ''
+            - name: implClientSecret
+              type: Secret
+              value: ''
+            - name: implRespTimeout
+              type: String
+              value: '30000'
+            - name: dataCenter
+              type: String
+              value: ''
+            - name: fgwTimeout
+              type: String
+              value: 30s
+            - name: openshiftProject
+              type: String
+              value: ''
+            - name: Hostname
+              type: String
+              value: '""'
+            - name: implTlsSecretGroup
+              type: String
+              value: tls-secret-group
+            - name: implTlsContext
+              type: String
+              value: tls-context
+- inputSet:
+    name: mkt-ras-proxy
+    tages: {}
+    identifier: mktrasproxy
+    orgIdentifier: regionsappdev
+    projectIdentifier: rdc
+    pipeline:
+      identifier: Flex_Gateway_Proxy_Deployment
+      template:
+        templateInputs:
+          stages:
+            variables:
+            - name: apBusinessGroupName
+              type: String
+              value: ''
+            - name: fgwInstanceName
+              type: String
+              value: ''
+            - name: apiSpecAssetId
+              type: String
+              value: ''
+            - name: apClientId
+              type: Secret
+              value: ''
+            - name: apClientSecret
+              type: Secret
+              value: ''
+            - name: apEnvName
+              type: String
+              value: ''
+            - name: apiSpecAssetVersion
+              type: String
+              value: 1.0.0
+            - name: policy
+              type: String
+              value: ''
+            - name: slaTiersSingleTier
+              type: String
+              value: ''
+            - name: slaTiersBasicMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersGoldMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersPlatinumMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersUnlimitedMaxReq
+              type: String
+              value: ''
+            - name: apiEnv
+              type: String
+              value: qa
+            - name: apiVersion
+              type: String
+              value: v1
+            - name: apiLabel
+              type: String
+              value: ''
+            - name: extClientProvider
+              type: String
+              value: ''
+            - name: dnsGlobal
+              type: String
+              value: ''
+            - name: dnsLocal
+              type: String
+              value: ''
+            - name: implHost
+              type: String
+              value: ''
+            - name: implProtocol
+              type: String
+              value: https
+            - name: implPort
+              type: String
+              value: '443'
+            - name: implPath
+              type: String
+              value: /
+            - name: implAuthHeader
+              type: String
+              value: ''
+            - name: implClientId
+              type: Secret
+              value: ''
+            - name: implClientSecret
+              type: Secret
+              value: ''
+            - name: implRespTimeout
+              type: String
+              value: '30000'
+            - name: dataCenter
+              type: String
+              value: ''
+            - name: fgwTimeout
+              type: String
+              value: 30s
+            - name: openshiftProject
+              type: String
+              value: ''
+            - name: Hostname
+              type: String
+              value: '""'
+            - name: implTlsSecretGroup
+              type: String
+              value: tls-secret-group
+            - name: implTlsContext
+              type: String
+              value: tls-context
+- inputSet:
+    name: regions-rates-sys-proxy
+    tages: {}
+    identifier: regionsratessysproxy
+    orgIdentifier: regionsappdev
+    projectIdentifier: rdc
+    pipeline:
+      identifier: Flex_Gateway_Proxy_Deployment
+      template:
+        templateInputs:
+          stages:
+            variables:
+            - name: apBusinessGroupName
+              type: String
+              value: ''
+            - name: fgwInstanceName
+              type: String
+              value: ''
+            - name: apiSpecAssetId
+              type: String
+              value: ''
+            - name: apClientId
+              type: Secret
+              value: ''
+            - name: apClientSecret
+              type: Secret
+              value: ''
+            - name: apEnvName
+              type: String
+              value: ''
+            - name: apiSpecAssetVersion
+              type: String
+              value: 1.0.0
+            - name: policy
+              type: String
+              value: ''
+            - name: slaTiersSingleTier
+              type: String
+              value: ''
+            - name: slaTiersBasicMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersGoldMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersPlatinumMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersUnlimitedMaxReq
+              type: String
+              value: ''
+            - name: apiEnv
+              type: String
+              value: qa
+            - name: apiVersion
+              type: String
+              value: v1
+            - name: apiLabel
+              type: String
+              value: ''
+            - name: extClientProvider
+              type: String
+              value: ''
+            - name: dnsGlobal
+              type: String
+              value: ''
+            - name: dnsLocal
+              type: String
+              value: ''
+            - name: implHost
+              type: String
+              value: ''
+            - name: implProtocol
+              type: String
+              value: https
+            - name: implPort
+              type: String
+              value: '443'
+            - name: implPath
+              type: String
+              value: /
+            - name: implAuthHeader
+              type: String
+              value: ''
+            - name: implClientId
+              type: Secret
+              value: ''
+            - name: implClientSecret
+              type: Secret
+              value: ''
+            - name: implRespTimeout
+              type: String
+              value: '30000'
+            - name: dataCenter
+              type: String
+              value: ''
+            - name: fgwTimeout
+              type: String
+              value: 30s
+            - name: openshiftProject
+              type: String
+              value: ''
+            - name: Hostname
+              type: String
+              value: '""'
+            - name: implTlsSecretGroup
+              type: String
+              value: tls-secret-group
+            - name: implTlsContext
+              type: String
+              value: tls-context
+- inputSet:
+    name: mkt-ras-proxy
+    tages: {}
+    identifier: mktrasproxy
+    orgIdentifier: regionsappdev
+    projectIdentifier: rdc
+    pipeline:
+      identifier: Flex_Gateway_Proxy_Deployment
+      template:
+        templateInputs:
+          stages:
+            variables:
+            - name: apBusinessGroupName
+              type: String
+              value: ''
+            - name: fgwInstanceName
+              type: String
+              value: ''
+            - name: apiSpecAssetId
+              type: String
+              value: ''
+            - name: apClientId
+              type: Secret
+              value: ''
+            - name: apClientSecret
+              type: Secret
+              value: ''
+            - name: apEnvName
+              type: String
+              value: ''
+            - name: apiSpecAssetVersion
+              type: String
+              value: 1.0.0
+            - name: policy
+              type: String
+              value: ''
+            - name: slaTiersSingleTier
+              type: String
+              value: ''
+            - name: slaTiersBasicMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersGoldMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersPlatinumMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersUnlimitedMaxReq
+              type: String
+              value: ''
+            - name: apiEnv
+              type: String
+              value: qa
+            - name: apiVersion
+              type: String
+              value: v1
+            - name: apiLabel
+              type: String
+              value: ''
+            - name: extClientProvider
+              type: String
+              value: ''
+            - name: dnsGlobal
+              type: String
+              value: ''
+            - name: dnsLocal
+              type: String
+              value: ''
+            - name: implHost
+              type: String
+              value: ''
+            - name: implProtocol
+              type: String
+              value: https
+            - name: implPort
+              type: String
+              value: '443'
+            - name: implPath
+              type: String
+              value: /
+            - name: implAuthHeader
+              type: String
+              value: ''
+            - name: implClientId
+              type: Secret
+              value: ''
+            - name: implClientSecret
+              type: Secret
+              value: ''
+            - name: implRespTimeout
+              type: String
+              value: '30000'
+            - name: dataCenter
+              type: String
+              value: ''
+            - name: fgwTimeout
+              type: String
+              value: 30s
+            - name: openshiftProject
+              type: String
+              value: ''
+            - name: Hostname
+              type: String
+              value: '""'
+            - name: implTlsSecretGroup
+              type: String
+              value: tls-secret-group
+            - name: implTlsContext
+              type: String
+              value: tls-context
+- inputSet:
+    name: mkt-ras-proxy
+    tages: {}
+    identifier: mktrasproxy
+    orgIdentifier: regionsappdev
+    projectIdentifier: rdc
+    pipeline:
+      identifier: Flex_Gateway_Proxy_Deployment
+      template:
+        templateInputs:
+          stages:
+            variables:
+            - name: apBusinessGroupName
+              type: String
+              value: ''
+            - name: fgwInstanceName
+              type: String
+              value: ''
+            - name: apiSpecAssetId
+              type: String
+              value: ''
+            - name: apClientId
+              type: Secret
+              value: ''
+            - name: apClientSecret
+              type: Secret
+              value: ''
+            - name: apEnvName
+              type: String
+              value: ''
+            - name: apiSpecAssetVersion
+              type: String
+              value: 1.0.0
+            - name: policy
+              type: String
+              value: ''
+            - name: slaTiersSingleTier
+              type: String
+              value: ''
+            - name: slaTiersBasicMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersGoldMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersPlatinumMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersUnlimitedMaxReq
+              type: String
+              value: ''
+            - name: apiEnv
+              type: String
+              value: qa
+            - name: apiVersion
+              type: String
+              value: v1
+            - name: apiLabel
+              type: String
+              value: ''
+            - name: extClientProvider
+              type: String
+              value: ''
+            - name: dnsGlobal
+              type: String
+              value: ''
+            - name: dnsLocal
+              type: String
+              value: ''
+            - name: implHost
+              type: String
+              value: ''
+            - name: implProtocol
+              type: String
+              value: https
+            - name: implPort
+              type: String
+              value: '443'
+            - name: implPath
+              type: String
+              value: /
+            - name: implAuthHeader
+              type: String
+              value: ''
+            - name: implClientId
+              type: Secret
+              value: ''
+            - name: implClientSecret
+              type: Secret
+              value: ''
+            - name: implRespTimeout
+              type: String
+              value: '30000'
+            - name: dataCenter
+              type: String
+              value: ''
+            - name: fgwTimeout
+              type: String
+              value: 30s
+            - name: openshiftProject
+              type: String
+              value: ''
+            - name: Hostname
+              type: String
+              value: '""'
+            - name: implTlsSecretGroup
+              type: String
+              value: tls-secret-group
+            - name: implTlsContext
+              type: String
+              value: tls-context
+- inputSet:
+    name: regions-rates-sys-proxy
+    tages: {}
+    identifier: regionsratessysproxy
+    orgIdentifier: regionsappdev
+    projectIdentifier: rdc
+    pipeline:
+      identifier: Flex_Gateway_Proxy_Deployment
+      template:
+        templateInputs:
+          stages:
+            variables:
+            - name: apBusinessGroupName
+              type: String
+              value: ''
+            - name: fgwInstanceName
+              type: String
+              value: ''
+            - name: apiSpecAssetId
+              type: String
+              value: ''
+            - name: apClientId
+              type: Secret
+              value: ''
+            - name: apClientSecret
+              type: Secret
+              value: ''
+            - name: apEnvName
+              type: String
+              value: ''
+            - name: apiSpecAssetVersion
+              type: String
+              value: 1.0.0
+            - name: policy
+              type: String
+              value: ''
+            - name: slaTiersSingleTier
+              type: String
+              value: ''
+            - name: slaTiersBasicMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersGoldMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersPlatinumMaxReq
+              type: String
+              value: '100'
+            - name: slaTiersUnlimitedMaxReq
+              type: String
+              value: ''
+            - name: apiEnv
+              type: String
+              value: qa
+            - name: apiVersion
+              type: String
+              value: v1
+            - name: apiLabel
+              type: String
+              value: ''
+            - name: extClientProvider
+              type: String
+              value: ''
+            - name: dnsGlobal
+              type: String
+              value: ''
+            - name: dnsLocal
+              type: String
+              value: ''
+            - name: implHost
+              type: String
+              value: ''
+            - name: implProtocol
+              type: String
+              value: https
+            - name: implPort
+              type: String
+              value: '443'
+            - name: implPath
+              type: String
+              value: /
+            - name: implAuthHeader
+              type: String
+              value: ''
+            - name: implClientId
+              type: Secret
+              value: ''
+            - name: implClientSecret
+              type: Secret
+              value: ''
+            - name: implRespTimeout
+              type: String
+              value: '30000'
+            - name: dataCenter
+              type: String
+              value: ''
+            - name: fgwTimeout
+              type: String
+              value: 30s
+            - name: openshiftProject
+              type: String
+              value: ''
+            - name: Hostname
+              type: String
+              value: '""'
+            - name: implTlsSecretGroup
+              type: String
+              value: tls-secret-group
+            - name: implTlsContext
+              type: String
+              value: tls-context

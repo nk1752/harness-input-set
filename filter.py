@@ -14,3 +14,5 @@ def input_data(x_key: str, x_value: str, input_set: list[dict]) -> list[dict]:
         print(f"KeyError: {x_value} not found in the input_set")
 
     return filter_set
+
+    return filter_set

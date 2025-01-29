@@ -18,7 +18,4 @@ inputSet:
                 - name: apBusinessGroupName
                   type: String
                   value: Marketing
-                - name: fgwInstanceName
-                  type: String
-                  value: fgw-marketing-dev-b-small-1
        

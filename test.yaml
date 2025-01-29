@@ -21,15 +21,4 @@ inputSet:
                 - name: fgwInstanceName
                   type: String
                   value: fgw-marketing-dev-b-small-1
-        - stage:
-            identifier: qaza
-            template:
-              templateInputs:
-                type: Deployment
-                variables:
-                - name: apBusinessGroupName
-                  type: String
-                  value: Marketing
-                - name: fgwInstanceName
-                  type: String
-                  value: fgw-marketing-np-b-small-1
+       

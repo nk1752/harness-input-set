@@ -117,19 +117,6 @@ inputSet:
                 when:
                   condition: 'true'
         - stage:
-            identifier: Approval_for_qaz
-            type: Approval
-            spec:
-              execution:
-                steps:
-                - step:
-                    identifier: Approval_for_qaz
-                    type: HarnessApproval
-                    spec:
-                      approvers:
-                        userGroups:
-                        - account.HARN_API_ADM
-        - stage:
             identifier: qaza
             template:
               templateInputs:
